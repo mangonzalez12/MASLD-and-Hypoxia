@@ -1,0 +1,895 @@
+﻿Canonical Pathways;e01=IOX.3/C;e04=IOX1/C;e06=T4/C;e09=T4IOX.3/C;e10=T4IOX1/C;e02=T4IOX.3/T4;e05=T4IOX1/T4
+EIF2 Signaling;0;0;0;0,34;0,31;0;0,33
+Major pathway of rRNA processing in the nucleolus and cytosol;0;0;0;0;0;0;0
+Nonsense-Mediated Decay (NMD);0;0;0;0;0;0;0
+SRP-dependent cotranslational protein targeting to membrane;0;0;0;0;0;0;0
+Selenoamino acid metabolism;0;0;0;0;0;0;0
+Eukaryotic Translation Initiation;0;0;0;0;0;0;0
+Response of EIF2AK4 (GCN2) to amino acid deficiency;0;0;0;0;0;0,28;0
+Eukaryotic Translation Termination;0;0;0;0;0;0;0
+Eukaryotic Translation Elongation;0;0;0;0;0;0;0
+Hepatic Fibrosis / Hepatic Stellate Cell Activation;1,96;1,25;17,32;15,98;21,38;0,39;4,8
+Axonal Guidance Signaling;1,18;1,56;15,79;16;12,57;2,88;4,44
+Pulmonary Fibrosis Idiopathic Signaling Pathway;2,62;0,74;13,03;15,2;13,03;0;6,6
+Extracellular matrix organization;2,46;1,09;16,2;16,6;14,62;0;3,97
+Collagen biosynthesis and modifying enzymes;1,27;1,44;9,38;9,72;15,83;2,85;7,2
+Elastic fibre formation;0;0;10,91;10,81;8,89;0;2,06
+Osteoarthritis Pathway;1,79;1,05;12,12;11,79;10,87;0;2,07
+Hepatic Fibrosis Signaling Pathway;2,31;2,53;11,03;13,5;13,7;0,71;5,24
+RHO GTPase cycle;0;0;8,85;11,71;13,66;0;1,72
+ID1 Signaling Pathway;0;0,22;11,09;13,16;9,95;1,22;3,58
+Tumor Microenvironment Pathway;0,86;1,32;10,06;11,83;11,33;0,84;7,59
+Wound Healing Signaling Pathway;1,74;0,99;9,82;12,7;13,02;0,26;5,28
+Cardiac Hypertrophy Signaling (Enhanced);0,44;0,36;10,83;13,08;12,9;1,75;3,86
+Myelination Signaling Pathway;1,53;2,45;12,57;15,2;9,79;1,49;4,43
+Coronavirus Pathogenesis Pathway;0;0,22;1,68;1,86;1,96;0;4,46
+mTOR Signaling;0;0,61;1,42;1,04;1,45;0;2,88
+Regulation of eIF4 and p70S6K Signaling;0;0;0;0,5;0,33;0;0,31
+Integrin cell surface interactions;1,17;0,5;7,41;8,14;7,57;0;3,17
+RAR Activation;0,52;0,52;8,47;9,64;9,23;0;2,74
+Role of Osteoclasts in Rheumatoid Arthritis Signaling Pathway;0,64;0,39;9,55;9,27;12,9;0;2,99
+Regulation of the Epithelial Mesenchymal Transition by Growth Factors Pathway;0,83;0,24;8,89;8,54;9,91;0,78;3,84
+Assembly of collagen fibrils and other multimeric structures;1,31;0,62;8,16;7,18;10,52;0;3,1
+Molecular Mechanisms of Cancer;0,8;1,05;9,01;9,77;7,56;0,77;4,69
+Role of Macrophages, Fibroblasts and Endothelial Cells in Rheumatoid Arthritis;1,51;1,2;7,7;9,95;10,48;0,36;5,96
+Human Embryonic Stem Cell Pluripotency;1,92;0,64;5,64;8,22;7,32;0;3,58
+Interleukin-4 and Interleukin-13 signaling;0;0,41;8,63;7,34;5,19;0;6,3
+Sertoli Cell-Germ Cell Junction Signaling Pathway (Enhanced);0;0;5,12;8,87;6,98;0,61;4,78
+Chronic Myeloid Leukemia Signaling;0,68;0,45;7,49;10,69;6,96;0,48;4,88
+Role of Tissue Factor in Cancer;0;0,22;6,86;9,52;8,06;0;4,78
+Senescence Pathway;0;0,41;9,33;10,74;8,38;1,65;3,17
+Glioblastoma Multiforme Signaling;2,05;1,37;6,85;10,05;6,11;1,43;3,57
+Thrombin Signaling;0;0,57;7,3;9,33;8,62;0,64;4,21
+Serotonin Receptor Signaling;0;0;8,8;8,12;8,19;1,66;3,27
+Post-translational protein phosphorylation;0;0,42;5,64;6,09;3,76;0,27;1,5
+Regulation of Insulin-like Growth Factor (IGF) transport and uptake by IGFBPs;0;0,37;5,19;5,48;3,3;0,23;1,17
+Activin Inhibin Signaling Pathway;0,78;0,59;5,09;5,49;6,12;0;3,15
+Pathogen Induced Cytokine Storm Signaling Pathway;0,57;1,07;4,7;3,22;5,02;0;3,48
+Collagen degradation;1,31;0,62;4,84;4,69;7,56;0;1,92
+Collagen chain trimerization;1,45;0,75;5,13;4,49;7,27;0;2,06
+HIF1 alpha Signaling;0,79;2,59;8;8,89;10,55;1,17;9,17
+IL-17A Signaling in Fibroblasts;1,16;1,24;4,42;3,23;9,12;0,88;8,75
+ILK Signaling;0;0,64;4,59;5,46;11;0;5,02
+Mitotic Metaphase and Anaphase;0;0;3,09;2,63;7,58;1,55;3,16
+Cell Cycle Checkpoints;0;0;2,13;3,21;7,15;2,42;3,07
+PPAR Signaling;1,07;0,42;4,23;5,12;5,95;0;2,36
+Neutrophil degranulation;0,48;1,7;4,32;5,63;7,64;0,58;2,63
+Estrogen Receptor Signaling;0,54;1,43;2,52;3,24;4,55;1,98;5,16
+CLEAR Signaling Pathway;0,68;1,41;4,2;5,46;4,77;0;2,8
+RAF/MAP kinase cascade;0,71;0;2,9;2,85;5,74;0,53;0,73
+NRF2-mediated Oxidative Stress Response;0;0;3,5;3,23;3,97;0;3,06
+Superpathway of Cholesterol Biosynthesis;0;0;9,26;6,57;9,75;0;0
+Cholesterol biosynthesis;0;0;9,56;8,81;7,06;0;0,56
+Response of EIF2AK1 (HRI) to heme deficiency;0;0;5,25;5,93;5,46;0,99;0,33
+DHCR24 Signaling Pathway;0,96;0,89;4,96;7,42;4,44;0;3,23
+O-linked glycosylation;0;0;6,3;6,19;6,51;1,33;1,07
+Glutaminergic Receptor Signaling Pathway (Enhanced);0;0;6,33;5,81;5,21;0,37;1,31
+Activation of gene expression by SREBF (SREBP);0;0;6,35;6,39;4,96;0;1,07
+NAFLD Signaling Pathway;0;0;6,16;6,14;6,73;0;2,98
+Cell Cycle: G2/M DNA Damage Checkpoint Regulation;0;0;5,62;5,55;4,23;0;1,28
+Cholesterol Biosynthesis II (via 24,25-dihydrolanosterol);0;0;6,01;5,58;6,37;0;0
+Cholesterol Biosynthesis I;0;0;6,01;5,58;6,37;0;0
+Cholesterol Biosynthesis III (via Desmosterol);0;0;6,01;5,58;6,37;0;0
+Syndecan interactions;0;0;4,22;5,32;4,77;0;1,02
+Signaling by TGF-beta Receptor Complex;0;0;6,56;7,13;6,26;0;0,77
+TGF-β Signaling;0;0,46;3,71;6,2;4,26;0;1,01
+IGF-1 Signaling;0;0;3,45;5,69;3,45;0,75;2,88
+Transcriptional activity of SMAD2/SMAD3:SMAD4 heterotrimer;0;0;4,45;5,05;3,8;0;1,31
+Transcriptional regulation by RUNX2;0;0,69;3,64;4,77;2,16;0,51;1,25
+Integrin Signaling;0,79;0,61;4,32;8,2;4,41;0;2,5
+ABRA Signaling Pathway;0;1,19;4,48;6,1;5,1;0;1,08
+Cachexia Signaling Pathway;0;0;5,39;5,63;6,87;0;1,76
+Response to elevated platelet cytosolic Ca2+;0,98;0,93;6,42;5,7;5,39;0;2,52
+Docosahexaenoic Acid (DHA) Signaling;2,95;0,51;6,14;4,65;6,72;0,26;2,77
+Signaling by PDGF;1,33;0,64;5,83;4,48;4,88;0;3,27
+Endothelin-1 Signaling;0;0;6,08;5,86;6,68;0,38;3,78
+WNT/Ca+ pathway;1,27;1,45;6,71;5,81;6,73;1,08;2,85
+Apelin Endothelial Signaling Pathway;0;0,32;4,69;5,68;7,51;0;5,8
+Gαq Signaling;0;0,75;5,63;5,57;5,41;0,45;6,22
+Mitotic Prometaphase;0;0;6,03;5,04;7,74;1,22;3,15
+Regulation of the Epithelial-Mesenchymal Transition Pathway;0,82;0,23;4,16;4,7;6,6;0,77;3,75
+Role of Osteoblasts, Osteoclasts and Chondrocytes in Rheumatoid Arthritis;0,76;0,56;5,2;5,53;8,79;0,63;2,18
+RHO GTPases Activate Formins;0;0;4,96;5,56;8,43;1,1;5,39
+Autophagy;0,78;1,13;4,5;4,91;7,81;0,33;4,05
+IL-6 Signaling;0,99;0,35;3,86;6,72;7,81;0;3,02
+Sertoli Cell-Sertoli Cell Junction Signaling;0;0;4,13;6,4;6,14;0;2,93
+Role of Chondrocytes in Rheumatoid Arthritis Signaling Pathway;0;0,33;7,62;6,29;7,24;0;3,17
+Pancreatic Adenocarcinoma Signaling;0;0,36;7,82;8,57;6,2;0,22;6,59
+Role of JAK family kinases in IL-6-type Cytokine Signaling;0;0,53;6,31;5,94;5,53;0,36;6,2
+HMGB1 Signaling;0;0,27;5,84;7,06;7,29;0;4,69
+Glioma Invasiveness Signaling;0;0,54;6,19;8,34;7,22;0;2,46
+Role of NFAT in Cardiac Hypertrophy;0;0;7,36;8,11;7,1;1,61;5,67
+Glioma Signaling;1;0,36;5,41;8,69;5,4;0,22;5,37
+Colorectal Cancer Metastasis Signaling;0,69;0,91;6,05;7,18;6,73;0,5;6,02
+Pulmonary Healing Signaling Pathway;0,82;0,65;6,29;8,11;6,07;0,37;5,13
+Unfolded protein response;0;0;8,03;8,07;5,82;0;1,95
+Ferroptosis Signaling Pathway;0;0;7,52;7,21;5,06;0,21;0,54
+Signaling by Rho Family GTPases;0;0;5,92;7,82;6,31;0,24;2,44
+Aryl Hydrocarbon Receptor Signaling;0;0,29;5,27;6,13;4,49;0;1,21
+Ephrin Receptor Signaling;0,81;1,89;3,92;7,44;5,85;0;2,77
+Reelin Signaling in Neurons;0;0,89;4,08;6,37;5,98;0,57;3,2
+Germ Cell-Sertoli Cell Junction Signaling;0;0,27;5,63;5,97;5,41;0;4,08
+Ribonucleotide Reductase Signaling Pathway;0;0,27;4,09;5,97;5,8;0;3,14
+GADD45 Signaling;0;0;6,22;6,67;5,78;0,45;3,16
+PPARα/RXRα Activation;0;0;5,42;4,53;5,69;0,39;2,58
+Sumoylation Pathway;0;0,43;7,1;6,5;5,89;0;1,22
+Sphingosine-1-phosphate Signaling;1,02;0,99;7,88;6,12;5,86;0,23;1,55
+Synaptogenesis Signaling Pathway;0,63;0,77;4,05;7,69;6,34;0,7;0,99
+Netrin Signaling;0;0,73;5,43;8,37;5,96;1,41;2,25
+IL-8 Signaling;0;0,61;5,12;7,51;7,01;0;2,93
+Protein Kinase A Signaling;0;0;4,54;7,13;9,14;1,1;3,39
+Cardiac Hypertrophy Signaling;0;0;5,59;6,78;7,11;0,91;1,93
+Oxytocin Signaling Pathway;0,68;0;5,49;6,86;7,4;0,82;2,48
+Gluconeogenesis I;0;8,72;0,47;0,65;1,18;7,46;3,19
+Glycolysis I;0;10,62;0,79;1,41;3,32;9,14;7,25
+Mitochondrial Dysfunction;0,6;0,34;1,48;1,05;1,11;0,61;0,59
+Oxidative Phosphorylation;0;0;0;0;0;0;0
+Electron transport, ATP synthesis, and heat production by uncoupling proteins;0;0;0;0;0;0;0
+Sirtuin Signaling Pathway;0,67;3,46;3,12;2,3;2,11;2,87;3,74
+Microautophagy Signaling Pathway;0,91;0,79;1,87;1,31;3,42;0;0,48
+Mitotic G1 phase and G1/S transition;0;0;2,15;1,58;3,54;1,82;1,37
+Transcriptional regulation by RUNX3;0;0;1,54;2,29;1,74;0;0,45
+Protein Ubiquitination Pathway;0;0;1,89;2,47;3,21;0,23;1,02
+Mitotic G2-G2/M phases;0;0;1,21;0,63;1,52;0,76;0
+Huntington's Disease Signaling;0;0;1,1;2,28;2,94;0;1,32
+Processing of Capped Intron-Containing Pre-mRNA;0;0;0;0;0;0;0
+NIK-->noncanonical NF-kB signaling;0;0;0;0;0,53;0;0
+Regulation of RUNX2 expression and activity;0;0;0;0;0,39;0;0
+PTEN Regulation;0;0;0;0,33;1,72;0;0,79
+ABC-family proteins mediated transport;1,1;0;0,38;0,46;1,52;0,28;1,26
+Regulation of Apoptosis;0;0;0;0;0;0;0
+Cellular response to hypoxia;0;0,54;0;0;0;0,38;0,72
+DNA Replication Pre-Initiation;0;0;0;0;1,16;0,27;1,2
+FAT10 Signaling Pathway;0;0;0;0;0,28;0;0
+Metabolism of polyamines;0;0;0,34;0;0,55;0,46;0
+TNFR2 non-canonical NF-kB pathway;0;0;0,5;0;0,68;0,41;0
+Hedgehog ligand biogenesis;0;0;0;0;0,57;0;0
+MAPK6/MAPK4 signaling;0;0;0;0;1,15;0;0
+Transcriptional regulation by RUNX1;0;0,83;0;0,52;0,48;0;0
+S Phase;0;0;0,4;0,35;0,88;0,79;0
+Signaling by ROBO receptors;0;0;0;0,35;1,4;0;0,29
+KEAP1-NFE2L2 pathway;0;0;0,4;0,5;0,77;0;0
+Degradation of beta-catenin by the destruction complex;0;0;0;0;0,32;0;0,29
+C-type lectin receptors (CLRs);0;0,32;0,51;0,3;0,89;0;0,42
+BAG2 Signaling Pathway;0;0;1,14;1,05;2,03;0;0,87
+Hedgehog 'off' state;0;0;1,02;0,41;0,33;0,25;1,05
+Hedgehog 'on' state;0;0;0,48;0,8;0,72;0,33;0
+Signaling by NOTCH4;0;0;0;0;0,63;0;0
+Synthesis of DNA;0;0;0;0,31;1,51;0,67;1,62
+Regulation of mitotic cell cycle;0;0;0;0,29;1,31;0,87;0,31
+TR/RXR Activation;0;2,56;3,92;4,17;6,01;1,16;10,03
+Class I MHC mediated antigen processing and presentation;0;0;0,89;1,34;2,62;0;0,44
+Intra-Golgi and retrograde Golgi-to-ER traffic;0;0;1,71;2,35;1,79;0;0,5
+COPII-mediated vesicle transport;0;0,56;0,6;1,3;1,5;0;0,47
+BER (Base Excision Repair) Pathway;0;0;2,21;3,88;1,51;0;0,27
+Neutrophil Extracellular Trap Signaling Pathway;1,37;0,57;2,38;2,01;3,57;0,48;1,84
+UVA-Induced MAPK Signaling;0;0;2,31;2,75;2,78;0,29;3,66
+Transcriptional regulation of white adipocyte differentiation;1,17;1,26;3,27;2,28;2,42;0,34;2,65
+NAD Signaling Pathway;0,93;1,51;2,45;4,23;1,64;0,52;4,82
+Virus Entry via Endocytic Pathways;0;0;3,37;4,08;4,33;0,67;3,4
+Smooth Muscle Contraction;0;0;3,35;4,01;2,43;0;1,52
+Clathrin-mediated Endocytosis Signaling;0,8;1,17;3;4,69;3,49;0,71;1,6
+Caveolar-mediated Endocytosis Signaling;0;0;3,5;2,88;3,09;0,38;0,72
+TNF signaling;0;0;1,39;1,1;2,94;0;0,38
+Oncogene Induced Senescence;0;0;3,2;2,24;4,15;0,66;0,79
+RIPK1-mediated regulated necrosis;0;0;2,82;3,02;3,19;0;0
+Death Receptor Signaling;0;0;2,52;3;4,26;0;1,37
+Apoptosis Signaling;0;0;3,18;4,92;4;0;0,87
+IL-1 Signaling;0;0;2,52;1,96;4,7;0,81;1,01
+NLR signaling pathways;0;0;2,67;2,21;6,41;0;0,71
+PTEN Signaling;0;0;3,46;7,73;3,63;0;1,67
+p75 NTR receptor-mediated signalling;0;0;3,44;6,3;5,24;0;0,65
+Neuregulin Signaling;0;0;2,81;5,17;3,06;0;2,51
+Chemokine Signaling;0;0;2,26;3,7;3,42;0;1,75
+Prostate Cancer Signaling;0;0;2,86;5,72;3,86;0,24;3,03
+Signaling by VEGF;0;0,42;3,33;4,15;2,95;0,73;2,33
+Non-Small Cell Lung Cancer Signaling;0;0;2,52;5,18;2,35;0;2,73
+Hereditary Breast Cancer Signaling;0;0;2,8;4,77;2,77;0;1,46
+Actin Nucleation by ARP-WASP Complex;0;0,47;3,94;4,5;2,54;0;0,74
+RHOGDI Signaling;0;0,2;4,03;5,79;3,23;0;0,38
+Regulation of lipid metabolism by PPARalpha;1,03;0,38;3,43;2,69;2,31;0;1,62
+BMAL1:CLOCK,NPAS2 activates circadian gene expression;0;0;2,81;3,08;3,32;0;0,52
+Glucocorticoid Receptor Signaling;0,41;0,31;1,91;2,88;2,46;0,38;1,79
+Beta-catenin independent WNT signaling;1,09;1,12;1,89;2,99;4,16;0,77;0,9
+Degradation of the extracellular matrix;0;0;2,82;2,72;3,01;1,08;1,75
+Signaling by MET;0;0;2,77;2,6;4,04;0;0,65
+Xenobiotic Metabolism AHR Signaling Pathway;0;0,49;3,49;3,23;3,76;0;0,32
+Acute Phase Response Signaling;0;0;2,83;4,03;3,27;0;2,79
+Signaling by NOTCH1;0;0;2,43;3,97;4,14;0;2,35
+Actin Cytoskeleton Signaling;0,73;0;1,62;5,35;3,95;0,27;1,35
+PAK Signaling;1,03;0,38;2,06;3,38;2,31;0;1,62
+Role of IL-17A in Arthritis;0;0;4,48;3,82;6,57;0;2,58
+Role of PKR in Interferon Induction and Antiviral Response;0,97;0,34;4,34;3,42;5,9;0,2;3,84
+STAT3 Pathway;0,97;0,91;4,4;4,61;5,14;0,2;2,44
+Role of Osteoblasts in Rheumatoid Arthritis Signaling Pathway;0,73;0,52;5,05;5,98;4,18;0;3,28
+Factors Promoting Cardiogenesis in Vertebrates;0,92;0,3;4,07;5,33;5,71;0,52;1,3
+Endocannabinoid Cancer Inhibition Pathway;0;0,31;3,22;4,43;6,05;1,03;1,71
+GNRH Signaling;0;0;4,13;5,43;6,68;0,79;3,48
+ROBO SLIT Signaling Pathway;0;0,36;4,11;4,8;3,45;0,22;1,45
+CDK5 Signaling;0;0,39;4,09;4,04;4,33;0,25;1,33
+Semaphorin Signaling in Neurons;0;0,62;5,44;4,69;5,05;0;0,98
+Acetylcholine Receptor Signaling Pathway;0;0;4,93;3,77;5,55;1,26;0,97
+Xenobiotic Metabolism Signaling;0;0;4,92;5,52;5,37;0;1,44
+BMP signaling pathway;0;0;4,57;4,68;5,7;0,31;1,48
+Semaphorin Neuronal Repulsive Signaling Pathway;0;0;3,76;6,7;5;1,01;2,01
+Adipogenesis pathway;0,96;0;4,55;3,95;3,05;0;2,77
+Adrenomedullin signaling pathway;0;0;4,65;5,16;4,53;0,75;4,08
+HGF Signaling;0;0;3,68;5,98;4,43;0;2,47
+RAC Signaling;0;0;2,72;5,56;4,44;0;2,77
+p53 Signaling;0;0,44;3,44;3,92;3,52;0;2,11
+Mouse Embryonic Stem Cell Pluripotency;1,07;0;2,34;5,21;3,45;0;2,39
+Transcriptional Regulatory Network in Embryonic Stem Cells;0,89;0,28;3,1;6,08;3,45;0;1,74
+Cell Cycle: G1/S Checkpoint Regulation;0;0;3,6;4,45;2,44;1,06;2,76
+Ovarian Cancer Signaling;0,91;0,79;3,34;5,23;3,11;0,49;3,99
+Bladder Cancer Signaling;0;0,39;3,23;4,81;2,47;0,69;4,11
+Macropinocytosis Signaling;1,21;0,53;3,34;4,55;4,73;0;3,54
+PI3K/AKT Signaling;0;0,23;4,35;4,19;3,09;0;2,82
+ERK/MAPK Signaling;0;0;2,69;4,91;3,94;0,33;2,09
+Sperm Motility;0;0;5,86;4,71;4,2;0,93;4,23
+Erythropoietin Signaling Pathway;0;0;4,48;5,16;4,29;0;5,4
+Aldosterone Signaling in Epithelial Cells;0;0;4,71;5,04;3,56;0,44;3,09
+Insulin Secretion Signaling Pathway;0;0,46;4,59;4,1;4,66;0,85;2,98
+DAG and IP3 signaling;0;0;4,21;4,28;3,15;0,59;2,9
+PDGF Signaling;1,15;0,48;2,18;5,37;3,59;0,32;5,52
+Cholecystokinin/Gastrin-mediated Signaling;0;0,38;5,12;4,57;5,25;0;6,44
+HER-2 Signaling in Breast Cancer;0;0;3,33;4,27;4,49;0,64;5,07
+CXCR4 Signaling;0;0,27;3,51;4,2;4,12;0;4,65
+Nitric Oxide Signaling in the Cardiovascular System;0;0,38;4,03;4,34;5,42;1,92;2,83
+Circadian Rhythm Signaling;0;0;3,75;5,08;6,37;0,88;3,53
+Opioid Signaling Pathway;0;0,45;4,12;5,41;5,64;1,27;3,64
+Production of Nitric Oxide and Reactive Oxygen Species in Macrophages;0;0,67;3,38;3,02;5,76;0;3,87
+P2Y Purigenic Receptor Signaling Pathway;0;0;2,59;3,84;5,99;1,13;4,42
+Renin-Angiotensin Signaling;0;0;3,57;3,87;4,49;0,65;4,37
+LXR/RXR Activation;0;0,37;4,38;4,27;6,23;0,65;2,34
+Atherosclerosis Signaling;2,27;1,66;5,86;3,97;5,74;0,21;2,95
+GP6 Signaling Pathway;0,99;0,36;3,98;4,24;6,56;0;3,08
+FAT10 Cancer Signaling Pathway;0;0;3,19;3,19;3,16;0;0,83
+Apelin Cardiac Fibroblast Signaling Pathway;0;1,01;4,18;4,55;3,34;0;1,18
+Interleukin-10 signaling;0;0;4,98;3,75;4,34;0;2,02
+Circadian Clock;0;0,63;1,64;2,41;4,75;0;2
+Signaling by ERBB4;0;0,63;2,02;1,3;2,75;0;0,66
+IL-10 Signaling;0;0;1,58;2,49;5,23;0,51;3,71
+CD40 Signaling;0;0;1,82;1,76;5,14;0,4;3,32
+p38 MAPK Signaling;0;0;4,59;4,92;6,53;0;0,92
+Bile acid and bile salt metabolism;0;0;3,59;4,51;7,13;0;1,44
+Oxytocin in Brain Signaling Pathway;0;0;3,97;5,16;6,69;0,37;2,42
+NGF Signaling;0;0;2,89;5,2;5,86;0,23;3,33
+RANK Signaling in Osteoclasts;0;0,47;3,5;3,61;6,51;0,31;2,84
+Kinetochore Metaphase Signaling Pathway;0;0;3,2;2,86;6,62;0,72;2,27
+Neuroinflammation Signaling Pathway;0;0,38;3,7;3,41;6,23;0;2,49
+VDR/RXR Activation;0;0;3,73;3,97;5,13;0,36;2,9
+Transport of inorganic cations/anions and amino acids/oligopeptides;0;0,43;5,41;4,47;5,31;0,76;1,2
+Immunogenic Cell Death Signaling Pathway;0;0;3,28;3,02;5,31;0;0,3
+Inflammasome pathway;0;0;3,14;2,14;5,75;0;0,71
+Interleukin-1 processing;0;0;2,89;1,78;6,03;0;2,32
+Regulation of Actin-based Motility by Rho;0;0,39;1,93;2,57;1,21;0;0,72
+Dilated Cardiomyopathy Signaling Pathway;0;0;3,17;2,39;3,36;1,02;0
+Clathrin-mediated endocytosis;0;0;1,39;1,87;1,33;0;0
+EPH-Ephrin signaling;0;1,18;1,63;2,4;2,15;0;0
+Iron uptake and transport;0;0;2,98;1,35;2,02;0,46;0,37
+Signaling by PTK6;0;0;1,49;1,51;0,91;0,48;1,13
+Signaling by ERBB2;0;0;1,4;1,45;1,84;0;0,47
+Epithelial Adherens Junction Signaling;0;0;1,25;3,2;1,65;0;0,7
+Regulation of Cellular Mechanics by Calpain Protease;0;0;1,5;2,64;1,23;0,32;0,79
+Phagosome Maturation;0;0;3,82;2,34;1,87;0;1,43
+AMPK Signaling;0;0,53;1,16;2,38;3,82;1,5;1,96
+Androgen Signaling;0;0;1,82;1,45;2,94;0,91;2,01
+Polyamine Regulation in Colon Cancer;0;0;1,64;2,84;0,76;0,46;2
+Tight Junction Signaling;0;0;2,46;2,22;1,73;1,38;1,47
+Apelin Adipocyte Signaling Pathway;0;0,47;3,21;1,6;1,19;0,31;0,77
+MHC class II antigen presentation;0;0;3,03;1,77;1,48;0,22;1,84
+Remodeling of Epithelial Adherens Junctions;0;0;3,12;1,81;1,72;0;1,23
+LPS/IL-1 Mediated Inhibition of RXR Function;0,72;0,5;4,21;3,29;3,14;0;0
+Autism Signaling Pathway;0,64;0;3,26;6,06;3,16;0,41;1,06
+Pyroptosis Signaling Pathway;0;0;5,4;2,46;5;0,31;0,74
+UDP-N-acetyl-D-glucosamine Biosynthesis II;0;0;5,79;3,84;3,6;0;0,65
+Factors involved in megakaryocyte development and platelet production;0;0;5,59;3,77;4,73;0,31;1,48
+Antioxidant Action of Vitamin C;0;1,03;5,53;4,11;4,41;0,7;2,61
+Apelin Pancreas Signaling Pathway;0;0,72;4,71;3,52;4,65;0,54;1,93
+L1CAM interactions;0;0;3,84;4,53;1,09;0;1,15
+RHOA Signaling;0;0;2,79;5,48;2,06;0;0,61
+Semaphorin interactions;0;0;2,97;5,48;4,67;1,11;1,81
+ATF6 (ATF6-alpha) activates chaperone genes;0;0;4,81;4,47;4,14;0;0
+NGF-stimulated transcription;0;0,8;3,83;4,58;4;0;0,32
+PFKFB4 Signaling Pathway;0;0,71;2,77;3,84;3,8;1,31;1,84
+ATF4 activates genes in response to endoplasmic reticulum stress;0;0;2,81;3,77;2,69;0,75;0,52
+G alpha (12/13) signalling events;0;0;2,31;5,82;3,51;0,36;0,64
+NCAM signaling for neurite out-growth;0;0;2,3;3,62;4,5;0,45;0,62
+White Adipose Tissue Browning Pathway;0;0,9;3,45;4,8;3,78;1,1;0,69
+Opioid Signalling;0;0;3,28;3,42;2,74;0,86;1,51
+DNA Methylation and Transcriptional Repression Signaling;0;0;2,41;3,25;1,93;0,29;1,72
+Small Cell Lung Cancer Signaling;0;0;2,41;4,99;3,28;0,29;2,17
+tRNA Charging;0;0,8;3,83;4,58;2,85;0,61;1,13
+XBP1(S) activates chaperone genes;0;0,71;3,96;5,2;2,88;0;2,5
+TP53 Regulates Transcription of Cell Death Genes;0;0,75;3,83;3,3;3,33;2,4;1,48
+TP53 Regulates Transcription of Cell Cycle Genes;0;0,71;3,85;2,32;2,33;0,52;0,49
+Cyclins and Cell Cycle Regulation;0;0;3,2;2,97;1,72;0,9;2,1
+Kinesins;0;0;3,72;3,13;2,18;0,45;1,92
+Metabolism of water-soluble vitamins and cofactors;0;2,63;2,44;2,41;4,75;0,46;0,66
+S100 Family Signaling Pathway;0,32;1,24;3,56;4,3;2,21;0,7;2,34
+FXR/RXR Activation;0;0,69;3,04;3,29;2,38;0;1,36
+Macrophage Alternative Activation Signaling Pathway;0;0;2,63;3,15;3,31;0;3,51
+Leukocyte Extravasation Signaling;0;0;2,71;3,51;2,79;0;4,28
+G-Protein Coupled Receptor Signaling;0,35;0,68;3,15;5,06;4,28;1,15;3,12
+Breast Cancer Regulation by Stathmin1;1,07;1,29;3,5;4,24;3,46;0,85;3,06
+Iron homeostasis signaling pathway;0,97;0,9;4,27;1,61;2,85;0,2;0,7
+IL-15 Production;0;0,37;3,57;3,14;3,03;0,23;5,57
+Interleukin-6 family signaling;0;0;3,23;2,24;1,94;0,8;5,51
+Renal Cell Carcinoma Signaling;1,19;2,24;1,57;2,85;3,01;0,35;3,35
+Prolactin Signaling;0;0;0,81;2,63;2,35;0;4,45
+Thrombopoietin Signaling;0;0;0,79;1,64;2,67;0;4,95
+Gap Junction Signaling;0;0;2,8;1,77;1,69;0,75;3,66
+Apelin Cardiomyocyte Signaling Pathway;0;0,44;2,98;2,69;2,07;0,28;3,62
+LPS-stimulated MAPK Signaling;0;0;1,33;2,11;4,66;0;4,29
+Angiopoietin Signaling;0;0;1,4;2,67;3,69;0;2,9
+Ceramide Signaling;0;0;1,98;2,82;3,67;0;2,84
+NF-κB Activation by Viruses;0;0;1,95;2,53;3,09;0;3,4
+14-3-3-mediated Signaling;0;0;2,55;2,8;2,99;0,22;4,68
+BEX2 Signaling Pathway;0;0,51;2,58;3,19;3,76;0;3,3
+JAK/STAT Signaling;0;0;2,09;3,9;3,18;0,34;5,13
+Acute Myeloid Leukemia Signaling;0;0;2,32;4,5;2,89;0;4,61
+MSP-RON Signaling in Cancer Cells Pathway;0;0,33;2;4,52;3,52;0;3,63
+fMLP Signaling in Neutrophils;0;0,35;2,68;3,97;4,12;0,6;3,96
+PEDF Signaling;0;0;1,99;2,9;4,76;0;1,21
+Gα12/13 Signaling;0;0,34;1,99;3,84;5,14;0,2;2,89
+MicroRNA Biogenesis Signaling Pathway;0,84;0,68;1,9;3,5;4,61;0;2,31
+Estrogen-Dependent Breast Cancer Signaling;0;0;1,76;3,9;4,97;0;2,14
+VEGF Signaling;0;0,44;1,93;3,84;3,44;0;2,08
+ERK5 Signaling;0;0;2,69;3,39;3,17;0;2,5
+Paxillin Signaling;0;0;1,89;2,92;2,56;0;1,46
+IL-17A Signaling in Airway Cells;0;0;2,61;2,11;3,18;0;3,32
+Role of IL-17F in Allergic Inflammatory Airway Diseases;0;0;2,95;2,04;4,06;0;1,38
+IL-17 Signaling;0;0,24;2,67;2,91;3,36;0;2,69
+Type II Diabetes Mellitus Signaling;0;0;3,35;2,54;3,19;0;1,99
+Pancreatic Secretion Signaling Pathway;0,73;0;3,38;3,62;3,49;0,97;2,84
+GM-CSF Signaling;0;0;2,82;4,04;2,92;0,39;1,56
+Synaptic Long Term Potentiation;0;0;2,73;3,31;4,19;0,61;1,7
+Vitamin-C Transport;0;2,33;2,68;3,02;2,06;0,81;1,18
+Inhibition of Angiogenesis by TSP1;0;0,85;2,06;2,78;2,92;0;2,63
+Signaling by BMP;0;0,96;3,64;2,59;2,25;0,76;0
+Ethanol Degradation IV;0;0;2,42;3,39;2,99;0;0
+Corticotropin Releasing Hormone Signaling;0;0,31;3,07;3,53;3,57;0,52;1,02
+MYC Mediated Apoptosis Signaling;0;0;3,19;3,73;3,16;0,52;0,47
+Ephrin B Signaling;0;0;2,41;2,3;2,92;0,39;0,24
+Signaling by EGFR;0;0;2,68;2,7;3,16;0;0
+Melanoma Signaling;0;0;2,07;4,06;2,5;0;1,72
+Endocannabinoid Developing Neuron Pathway;0;0;1,67;2,8;2,99;0,62;2,61
+WNT/β-catenin Signaling;0,87;0,27;1,9;3,64;1,95;0;1,27
+GDNF Family Ligand-Receptor Interactions;0;0;1,76;4,55;2,93;0;1,88
+Role of NANOG in Mammalian Embryonic Stem Cell Pluripotency;1;0,36;1,78;3,68;2,85;0,22;1,47
+Neurotrophin/TRK Signaling;0;0;0,61;2,92;3,09;0;1,34
+Xenobiotic Metabolism General Signaling Pathway;0;0,32;1,4;2,93;2,44;0;1,44
+Role of MAPK Signaling in the Pathogenesis of Influenza;0;0;1,76;2,65;2,79;0;0,58
+Role of MAPK Signaling in Promoting the Pathogenesis of Influenza;0;0;2,29;2,63;2,91;0;1,35
+Salvage Pathways of Pyrimidine Ribonucleotides;0;0,45;3,64;2,93;1,7;0,81;3,22
+Necroptosis Signaling Pathway;0;0;2,93;3,04;2,51;0;1,59
+IL-13 Signaling Pathway;0;0;2,42;2,11;1,55;0;2,48
+Neuropathic Pain Signaling in Dorsal Horn Neurons;0;0;2,5;1,93;2,27;0,77;2,48
+CGAS-STING Signaling Pathway;0;0;2,67;1,74;2,69;0;2,3
+Adrenergic Receptor Signaling Pathway (Enhanced);0;0;3,69;2,46;2,34;0,75;1,75
+Sonic Hedgehog Signaling;0;0;2,94;2,56;0,92;0,7;0,88
+Endocannabinoid Neuronal Synapse Pathway;0;0;2,58;1,66;1,75;1,63;0,8
+Leptin Signaling in Obesity;0;0;2,11;1,99;1,27;0,97;1,42
+Melatonin Signaling;0;0;2,41;1,93;1,82;1,02;2,04
+Orexin Signaling Pathway;0;0;2,41;2,01;1,99;1,01;2
+Cell Cycle Control of Chromosomal Replication;0;0;2,67;3,61;4,58;0;2,12
+Glycerophospholipid biosynthesis;0;0;3,1;4,9;3,21;0,29;1,3
+Asparagine N-linked glycosylation;0;0;2,35;4,51;2,74;0,7;0,44
+Amyotrophic Lateral Sclerosis Signaling;0;0,39;2,42;4,23;3;0,24;0,45
+PIP3 activates AKT signaling;0,96;0,33;3;3,53;4;0;1,54
+CDX Gastrointestinal Cancer Signaling Pathway;0,81;0,22;2,64;3,38;4,04;0;2
+Relaxin Signaling;0;0,3;3,16;3,93;5,39;0,5;1,9
+Natural Killer Cell Signaling;0,82;0,65;2,27;4,19;4,59;0;3,23
+NOD1/2 Signaling Pathway;0;0,24;1,9;1,68;3,96;0;1,32
+TNFR2 Signaling;0;0;2,25;1,46;3,82;0;2,04
+HOTAIR Regulatory Pathway;0;0,28;2,22;3,47;3,14;0;2,49
+Multiple Sclerosis Signaling Pathway;0;0,2;2,78;3,14;3,14;0,32;2,69
+Hepatic Cholestasis;0;0,2;2,74;2,83;3,1;0;1,98
+RAF-independent MAPK1/3 activation;0;0;2,05;2,36;2,66;0,81;3,59
+eNOS Signaling;0;0,29;2,21;2,6;3,22;0,97;2,67
+VEGF Family Ligand-Receptor Interactions;0;0,49;1,66;3,73;3,02;0;2,58
+Netrin-1 signaling;0;0;2,21;3,19;3,68;0;1,8
+Cell junction organization;0;0;1,15;2,88;3,35;0,31;1,89
+PCP (Planar Cell Polarity) Pathway;1,31;1,53;1,96;2,76;3,11;0,45;1,01
+Regulation of the Epithelial Mesenchymal Transition in Development Pathway;1,16;0,49;1,62;2,11;2,58;0,33;1,59
+Melanocyte Development and Pigmentation Signaling;0;0;1,39;2,4;3,14;0,29;1,67
+FGF Signaling;0;0;1,29;2,77;3,26;0,87;0,54
+SUMOylation of intracellular receptors;0;0;1,57;2,34;1,53;0;0
+Endoplasmic Reticulum Stress Pathway;0;0;2,98;2,65;1,75;0;0
+Xenobiotic Metabolism PXR Signaling Pathway;0;0,23;2,44;2,4;2,54;0;0
+Putrescine Degradation III;0;0;2,83;2,5;2,19;0;0,22
+Role of MAPK Signaling in Inhibiting the Pathogenesis of Influenza;0;0;2,77;2,6;2,77;0;0,98
+Tetrahydrofolate Salvage from 5,10-methenyltetrahydrofolate;0;0;1,97;1,83;4,33;0;0,72
+Transcriptional Regulation by NPAS4;0;0;1,98;1,67;5,37;0;0,37
+Unfolded Protein Response (UPR);0;0;2,72;3,17;3,61;0;0
+Platelet homeostasis;0;0;3,57;3,73;4,29;0,33;0,85
+Signaling by SCF-KIT;0;0;3,35;2,37;4,02;0;1,01
+Superpathway of Geranylgeranyldiphosphate Biosynthesis I (via Mevalonate);0;0;3,52;1,79;3,61;0;0,28
+Mevalonate Pathway I;0;0;3,52;1,68;3,78;0;0,35
+Metabolism of folate and pterines;0;0;2,85;1,83;2,33;0;1,01
+Superpathway of Serine and Glycine Biosynthesis I;0;0;3,2;3;2,81;0;0,72
+Folate Transformations I;0;0;2,89;2,66;3,43;0;1,3
+Deubiquitination;0;0;0,47;0,95;1,06;0;0,72
+Interleukin-1 family signaling;0;0;0,38;0,53;1,88;0;0,57
+Neddylation;0;0;0,93;0,52;1,62;0;0
+Granzyme A Signaling;1,22;0,54;0;0,37;0,86;0,38;0
+RHO GTPases activate PKNs;0;0;1,12;1,8;0,48;0;0
+Detoxification of Reactive Oxygen Species;0;0;1,38;1,52;0,91;0;0,72
+TP53 Regulates Metabolic Genes;0;0,49;0,61;0,75;1,07;0,33;0,82
+Colanic Acid Building Blocks Biosynthesis;0;1,22;0,34;0,28;0,23;2,35;0,96
+NADH Repair;0;1,87;0;0,49;0,45;1,67;0,93
+Mitochondrial translation;0;0;0;0;0;0;0
+Chaperone Mediated Autophagy;0;0;0;0;0;0;0,22
+Aggrephagy;0;0;0,49;0;0;0;1,01
+Late endosomal microautophagy;0;0;0;0;0;0;0,39
+Endosomal Sorting Complex Required For Transport (ESCRT);0;0;0;0;0;0;0
+TCF dependent signaling in response to WNT;0,82;0,23;0;0,63;0,62;0,37;0
+Gap junction trafficking and regulation;0;0;1,16;0;0;0;1,31
+Macroautophagy;0;0;0;0;0,4;0;0,9
+Mechanisms of Viral Exit from Host Cells;0;0;0,33;0,24;0,72;0;1,07
+Inhibition of ARE-Mediated mRNA Degradation Pathway;0;0;0;0;0;0;0
+MTOR signalling;0;0;0;0;0,27;0;0
+TCR signaling;0;0;0;0;0;0;0
+Signaling by the B Cell Receptor (BCR);0;0,27;0;0;0;0;0
+IL-12 Signaling and Production in Macrophages;0,75;1,05;1,62;1,51;2,09;0,61;5,78
+The citric acid (TCA) cycle and respiratory electron transport;0;2,72;0,61;1,51;2,25;3,17;2,77
+Cytoprotection by HMOX1;0;0;0,65;0,47;3,38;0;1,88
+RORA activates gene expression;0;0;0,22;0,42;2,15;0;2,27
+Heme signaling;0;0;2,06;2,12;3,63;0;1,97
+Transcriptional Regulation by MECP2;0;0;1,79;1,42;2,84;0;0,94
+Dissolution of Fibrin Clot;0;1,25;2,04;2,59;1,63;0;1,01
+Inhibition of Matrix Metalloproteases;0;0;2,65;2,26;2,35;0;2,32
+Glycosaminoglycan metabolism;0;0;1,95;2,53;3,09;0;2,27
+Signaling by Activin;0;0;1,15;1,55;1,36;0;0
+RHO GTPases activate CIT;0;0;0,84;1,67;0,97;0,89;0,26
+RHO GTPases Activate ROCKs;0;0;0,84;1,14;0,59;0;0
+Cargo concentration in the ER;0;0,85;1,58;2,24;2,38;0;0,39
+Alpha-protein kinase 1 signaling pathway;0;0;0,96;1,45;1,29;0;0
+Protein Sorting Signaling Pathway;0;0,26;1,34;2,05;1,4;0;0,71
+Amyloid Processing;0;0;1,72;1,76;1,77;0,51;0
+Regulation of cholesterol biosynthesis by SREBP (SREBF);0;0;1,15;2,22;1,36;0;0,33
+Parkinson's Signaling;0;0;0,28;0,51;0,78;0;0,31
+PI Metabolism;0;0;0,4;1,43;0,84;0;0,92
+Pyroptosis;0;0;1,18;0,38;1,18;0;0,52
+SNARE Signaling Pathway;0,97;0;1,21;1,41;1,79;0,59;0
+MAP kinase activation;0;0;0,91;1,38;1,89;0;0,32
+Intrinsic Pathway for Apoptosis;0;0;1,16;1,88;1,19;0;0
+Gene and protein expression by JAK-STAT signaling after IL-12 stimulation;0;0;1;1,96;1,63;0;0,72
+RNA Polymerase II Transcription;0;0;0;0;0;0;0
+Signaling by FGFR2;0;0;0,4;0,4;0,39;0,39;0
+Nucleotide Excision Repair;0;0;1;1,11;0,97;0;0
+TP53 Regulates Transcription of DNA Repair Genes;0;0;0,46;0,46;0;0;0,8
+Signaling by FGFR1;0;0;1,06;1,12;0,87;0;0
+RNA Polymerase I Transcription;0;0,7;1,4;0,83;0,87;0;0
+Regulation of TP53 Expression and Degradation;0;0;0,91;1,03;0,35;0;0
+HSP90 chaperone cycle for steroid hormone receptors in the presence of ligand;0;0;1,49;0,29;0,48;0;0,41
+COPI-mediated anterograde transport;0;0,44;0,67;0;0,27;0;0,62
+Regulation of TP53 Activity through Methylation;0;0;1,9;1,14;2,01;0;0,26
+Metabolism of nitric oxide: NOS3 activation and regulation;0;0;1,75;1,55;0,86;0,99;0,33
+DNA Damage Bypass;0;0;1,51;1,22;1,26;0;0,5
+trans-Golgi Network Vesicle Budding;0;0;0,76;0,96;1,14;0;0
+Signaling by NOTCH2;0;0;0,51;0,64;2,38;0;0,39
+E3 ubiquitin ligases ubiquitinate target proteins;0;0;0,86;0,66;1,51;0;0
+Protein ubiquitination;0;0;0;0,3;0,66;0;0,46
+Myo-inositol Biosynthesis;0;1,65;1,03;0,94;0,85;0;0
+Sphingosine and Sphingosine-1-phosphate Metabolism;0;0;1,19;1,06;0;0;0
+Ceramide Degradation;0;0;0,77;0,69;0,19;0;0
+Glutathione Redox Reactions I;0;0;1,12;0,93;0,27;0;0,5
+RNA Polymerase III Transcription;0;0;0,55;0;0;0;0
+Extra-nuclear estrogen signaling;0;0;0,26;1,26;1,18;1,01;0,75
+MyD88 dependent cascade initiated on endosome;0;0,89;0,36;0,49;0,92;0;0
+MyD88 cascade initiated on plasma membrane;0;0;0,28;0,44;0,6;0;0
+MyD88:MAL(TIRAP) cascade initiated on plasma membrane;0;0;0,31;0,61;0,46;0;0
+Assembly of RNA Polymerase II Complex;0;0;0;0;0;0;0
+Cristae formation;0;0;0;0;0;0;0
+Formation of xylulose-5-phosphate;0;0;0,36;0,94;0,85;0;0
+NER (Nucleotide Excision Repair, Enhanced Pathway);0;0;1,5;1,12;0,47;0;0
+ESR-mediated signaling;0;0,39;0;0,57;0,92;0;0,45
+Pexophagy;0;0;0,47;0,4;0,74;0;0
+RAS processing;0;0;0,31;0,24;0,65;0;0
+Signaling by FGFR3;0;0;0,58;0,68;0,52;0;0
+Signaling by FGFR4;0;0;0,55;0,65;0,49;0;0
+Plasma lipoprotein assembly, remodeling, and clearance;0;1,34;0,93;1,71;2,25;0,37;3,59
+Retinoid metabolism and transport;0;0,75;1,36;1,45;2,33;0;1,48
+Hypoxia Signaling in the Cardiovascular System;0;1,34;0,51;2,05;3,01;0,37;2,42
+Senescence-Associated Secretory Phenotype (SASP);0;0;1,03;0,99;3,26;0,39;2,01
+IL-9 Signaling;0;0;1,89;1,19;2,17;0,64;3,26
+RET signaling;0;0;1,97;1,65;2,63;0;2,22
+iNOS Signaling;0;0;1,57;1,27;2,51;0;2,55
+Interferon gamma signaling;0;0,46;1,63;1,47;1,84;0;2,8
+UDP-N-acetyl-D-galactosamine Biosynthesis II;0;1,25;1,35;1,2;2,33;1,05;2,83
+Role of Pattern Recognition Receptors in Recognition of Bacteria and Viruses;0;0,8;1,69;1,37;2,37;0;4,58
+IL-23 Signaling Pathway;0;0;1,51;0,91;1,99;0;3,91
+Activation of the pre-replicative complex;0;0;0;1,39;2,49;1,62;1,98
+Glucose metabolism;0;2,26;0,3;0,77;2,7;0,94;3,4
+Interferon alpha/beta signaling;0;0,56;0;0,62;1,56;0;5,27
+Coronavirus Replication Pathway;0;0;0,96;0;0,38;0;2,66
+Transcriptional Regulation by VENTX;0;0;0;0,44;1,41;0;1,64
+Cytosolic sensors of pathogen-associated DNA;0;0,73;0,92;0,31;1,74;0;1,97
+Role of RIG1-like Receptors in Antiviral Innate Immunity;0;0,73;0,42;0;1,05;0;1,97
+Role of Hypercytokinemia/hyperchemokinemia in the Pathogenesis of Influenza;0;0,49;0,34;0;1,14;0;4,34
+Activation of IRF by Cytosolic Pattern Recognition Receptors;0;0,6;0,57;0,26;1,58;0,42;3,54
+Macrophage Classical Activation Signaling Pathway;0;0;0,76;0,44;0,67;0,4;4
+ISG15 antiviral mechanism;0;0;0;0;1,27;0;3,22
+Interleukin-12 family signaling;0;0;0,43;0,35;0;0;2,98
+Growth Hormone Signaling;0;0;0,81;0,59;0,75;0,39;2,58
+Interferon Signaling;0;0;0,45;0,85;1,72;0;4,97
+Role of JAK1, JAK2 and TYK2 in Interferon Signaling;0;0;0,84;1,06;1,26;0;4,21
+ISGylation Signaling Pathway;0;0,42;0,55;0,62;0,67;0;3,88
+Apelin Liver Signaling Pathway;1,66;2,19;0,79;0,99;2,13;0;0
+Signaling by Retinoic Acid;0;0,75;1,01;0,8;1,16;1,39;2,06
+Pyrimidine Deoxyribonucleotides De Novo Biosynthesis I;0;1,01;1,02;0,52;0;1,92;1,18
+Interconversion of nucleotide di- and triphosphates;0;1,03;1,58;0,92;0,76;0,83;1,95
+Branched-chain amino acid catabolism;0;0;2,02;1,23;1,06;0,91;2,27
+YAP1- and WWTR1 (TAZ)-stimulated gene expression;0;0;1,75;1,55;0,47;0;0
+Superoxide Radicals Degradation;0;0;1,33;1,99;1,81;0;0,55
+NR1H2 and NR1H3-mediated signaling;0;0,7;1,4;0,83;2,24;0,52;1,28
+TNFs bind their physiological receptors;0;0;1,06;1,71;1,44;0;0
+CREB Signaling in Neurons;1,05;1,26;1,51;2,8;2,06;1,47;1,37
+Phagosome Formation;0,35;0,42;0,95;2,31;0,57;0;1,52
+Cell surface interactions at the vascular wall;0;0,21;0,96;1,27;0,65;1,17;1,03
+Th1 and Th2 Activation Pathway;0;0,27;1,24;1,51;1,52;1,42;1,91
+Granulocyte Adhesion and Diapedesis;0;0;1,67;1,29;1,1;0,4;1,95
+Agranulocyte Adhesion and Diapedesis;0;0;1,73;1,13;1,06;0,35;1,58
+Caspase activation via Death Receptors in the presence of ligand;0;0;1,06;0,92;1,25;0;0,31
+Choline catabolism;0;0;1,03;1,83;1,69;0;0
+Role of BRCA1 in DNA Damage Response;0;0;0,81;0,99;1,4;0;0,38
+Insertion of tail-anchored proteins into the endoplasmic reticulum membrane;0;0;0,68;0,92;2,82;0;0,22
+Peroxisomal lipid metabolism;0;0;0,68;0,29;2,19;0,83;0,22
+Pre-NOTCH Expression and Processing;0;0;0,51;0,68;2,61;0;0,42
+Ketolysis;0;0;1,07;0,46;3,08;0;0,47
+Receptor-type tyrosine-protein phosphatases;0;1,07;1,78;1,56;2,49;0,87;0,71
+Mitotic Roles of Polo-Like Kinase;0;0;1,93;1,54;2,92;1,07;0,86
+TRAIL signaling;0;0;1,33;1,2;2,73;0;0,55
+Neurotransmitter clearance;0;0;1,77;1,6;2,18;0;0,47
+dTMP De Novo Biosynthesis;0;0;1,97;1,83;1,69;0;0,72
+Zymosterol Biosynthesis;0;0;1,7;1,57;2,38;0;0
+Calcium Signaling;0;0,2;2,34;2,45;3,23;1,12;1,72
+Fc Epsilon RI Signaling;0;0;0,82;2,63;1,98;0;1,24
+Epoxysqualene Biosynthesis;0;0;1,93;1,83;1,73;0;0
+Histidine Degradation III;0;0;1,33;1,2;1,81;0;0,55
+Putrescine Biosynthesis III;0;0;1,93;1,83;1,73;0;0
+MIF Regulation of Innate Immunity;0;0;2,7;1,84;2,33;0;0,98
+MIF-mediated Glucocorticoid Regulation;0;0;2,4;1,59;2,17;0;0,74
+Ketogenesis;0;0;1,61;0,85;2,8;0;0,43
+Dopamine-DARPP32 Feedback in cAMP Signaling;0;0;1,33;1,01;2,94;0,82;1,09
+tRNA Splicing;0;0;1,25;2,12;2,6;0;0,25
+Cardiac β-adrenergic Signaling;0;0;0,77;1,54;2,96;0,85;0
+Myogenesis;0;0;2;2,23;2,43;0,72;1,53
+Glycine Biosynthesis I;0;0;1,93;1,83;1,73;0;1,1
+Carnitine metabolism;0;0;1,25;1,68;2,14;0;0,96
+Calcium Transport I;0;0;1,77;2,4;2,18;0;0,47
+Phenylalanine Degradation IV (Mammalian, via Side Chain);0;0;2,65;2,39;2,14;0;0,96
+Neurotransmitter uptake and metabolism In glial cells;0;0;2,33;2,18;2,04;0;0
+Ion channel transport;0;0,71;3,53;2,36;2,55;0;0
+Estrogen-mediated S-phase Entry;0;0;1,25;2,59;1,72;0,76;0
+FOXO-mediated transcription of cell cycle genes;0;0;2,9;1,91;1,15;0,93;0,29
+Complement System;0;0;2,85;3,58;0,91;0,63;1,2
+Transcriptional regulation of granulopoiesis;0;0;0,74;1,76;1,41;0;0
+Neurexins and neuroligins;1,34;0;2,59;1,4;0,61;0;1,08
+NFE2L2 regulates pentose phosphate pathway genes;0;0;3,2;1,99;1,08;0;1,4
+PD-1, PD-L1 cancer immunotherapy pathway;0;0;1,34;2,25;1;0;0,8
+Role of JAK2 in Hormone-like Cytokine Signaling;0;0,62;1,84;2,19;1,14;0;1,39
+Oleate Biosynthesis II (Animals);0;0;2,4;2,19;0,74;0;0,43
+β-alanine Degradation I;0;0;1,93;1,83;0,59;0;0
+NFE2L2 regulating anti-oxidant/detoxification enzymes;0;0;2,57;2,28;1,45;0;0,26
+Integration of energy metabolism;0;0,43;1,55;1,64;0,36;2,17;0,61
+Signaling by Hippo;0;0;1,24;1,06;0;0;0
+RAB geranylgeranylation;0;0;0,79;2,38;0,4;0,42;0
+Signaling by NTRK2 (TRKB);0;0;1,33;2,12;1,35;0;0
+Resolution of Abasic Sites (AP sites);0;0;1,74;2,35;0,86;0;0
+Biotin-carboxyl Carrier Protein Assembly;0;0;1,48;1,39;1,29;0;0
+Phenylethylamine Degradation I;0;0;1,22;1,12;1,03;0;0
+Fatty acyl-CoA biosynthesis;0;0;1,66;0,99;1,18;0;0
+γ-linolenate Biosynthesis II (Animals);0;0;1,9;1,14;0,59;0;0,74
+GPCR-Mediated Integration of Enteroendocrine Signaling Exemplified by an L Cell;0;0;2,62;1,45;1,1;0,99;0,72
+GPCR-Mediated Nutrient Sensing in Enteroendocrine Cells;0;0;2,1;1,57;1,55;1,97;0,68
+Phospholipases;0;0;2,61;2,5;1,36;0,4;0,51
+cAMP-mediated signaling;0;0;1,65;2,36;1,73;0,61;0,3
+Cardiomyocyte Differentiation via BMP Receptors;0;0;2,2;1,41;1,18;0;0
+EGR2 and SOX10-mediated initiation of Schwann cell myelination;0;0;2;1,26;1,44;0;0
+Cardiac conduction;0;0;2,5;3,08;1,56;0,62;0
+Interleukin-7 signaling;0;0;1,68;2,01;1,75;0,85;0
+Cellular Effects of Sildenafil (Viagra);0;0;2,24;2,12;2,2;1,02;0,57
+Synaptic Long Term Depression;0;0;2,34;2,29;1,96;0,38;0,94
+Xenobiotic Metabolism CAR Signaling Pathway;0;0,24;0,98;1,16;0,84;0;0,57
+Dopamine Degradation;0;0;1,28;1,46;1,21;0;0
+Tryptophan Degradation X (Mammalian, via Tryptamine);0;0;1,66;1,9;1,62;0;0
+Fatty Acid α-oxidation;0;0;1,68;2,01;1,75;0;0
+Ethanol Degradation II;0;0;1,51;1,67;1,38;0;0
+Noradrenaline and Adrenaline Degradation;0;0;1,38;1,52;1,25;0;0
+MyD88-independent TLR4 cascade;0;0,82;1;0,81;2,07;0;0,35
+Toll Like Receptor 3 (TLR3) Cascade;0;0,87;0,9;0,73;2,61;0;0,85
+Toll-like Receptor Signaling;0;0;0,87;0,46;2,85;0;2,35
+4-1BB Signaling in T Lymphocytes;0;0;0,8;0,95;2,92;0;1,93
+TWEAK Signaling;0;0;2,31;1,96;3,1;0;1,2
+CD27 Signaling in Lymphocytes;0;0;1,39;1,75;2,94;0;2,08
+B Cell Activating Factor Signaling;0;0,76;1,83;1,15;2,92;0,57;2,11
+April Mediated Signaling;0;0,77;1,9;1,2;3,03;0,58;2,16
+TNFR1 Signaling;0;0;1,35;1,07;3,06;0;0,81
+IL-33 Signaling Pathway;0;0;1,51;1,16;3,17;0,41;0,84
+Folate Polyglutamylation;0;0;1,97;1,83;2,81;0;1,81
+Pyridoxal 5'-phosphate Salvage Pathway;0;0;2,45;2,8;1,91;0;2,31
+Cancer Drug Resistance by Drug Efflux;0;0,64;1,7;2,93;2,02;0,46;2,62
+Lymphotoxin β Receptor Signaling;0;0;1,39;1,75;1,39;0;1,08
+Sphingolipid metabolism;0;0;1,62;2,11;2,58;0;0
+IL-17A Signaling in Gastric Cells;0;0;2,31;1,5;2,84;0;1,05
+ATM Signaling;0;0;1,67;2,08;1,31;0;0,94
+DNA damage-induced 14-3-3σ Signaling;0;0;1,63;1,7;2,15;0,55;0,93
+Induction of Apoptosis by HIV1;0;0;2,05;1,64;2,27;0;0,3
+Retinoic acid Mediated Apoptosis Signaling;0;0;0,7;1,58;0,72;0;1,45
+Tryptophan catabolism;0;0;0,87;2;1,79;0;1,08
+Synthesis of Prostaglandins (PG) and Thromboxanes (TX);0;0;2,47;2,22;1,36;0;2,58
+Mitochondrial biogenesis;0;0;1,09;2,06;1,63;0;1,81
+Prostanoid Biosynthesis;0;0;1,77;1,6;0,84;0;2,18
+Telomerase Signaling;0;0;0,86;2,52;0,78;0;2,74
+IL-3 Signaling;0;0;0,58;0,95;1,35;0;3,35
+CNTF Signaling;0;0;0,99;1,3;1,28;0,46;3,9
+Signaling by ALK;0;0;1,12;1,8;1,11;0,73;2,29
+Role of JAK1 and JAK3 in γc Cytokine Signaling;0;0;1,14;2,05;1,32;0;1,18
+Glycogen Biosynthesis II (from UDP-D-Glucose);0;0;1,5;0,69;1,24;0;1,51
+TREM1 Signaling;0;0;1,44;1,1;1,27;0,37;1,88
+MSP-RON Signaling in Macrophages Pathway;0;0;0,48;1,02;2,21;0;2,4
+UVB-Induced MAPK Signaling;0;0;1,2;1,24;2,33;0;2,21
+Activation of NMDA receptors and postsynaptic events;0;0;2,46;1,09;0,99;0,34;1,67
+Glycogen metabolism;0;0;1,41;1,2;1,94;0;1,14
+Signaling by NOTCH3;0;0;1,4;1,45;2,68;0;1,28
+Insulin Receptor Signaling;0;0;1,32;2,27;2,4;0;1,54
+FLT3 Signaling in Hematopoietic Progenitor Cells;0;0;0,71;3,04;2,79;0;1,25
+Oncostatin M Signaling;0;0;1,41;1,92;1,58;0;2,78
+UVC-Induced MAPK Signaling;0;0;1,35;1,76;2,16;0;3,7
+α-Adrenergic Signaling;0;0;1,34;1,66;2,25;0,73;2,3
+CCR3 Signaling in Eosinophils;0;0;1,01;1,89;2,32;0,2;2,41
+Thyroid Cancer Signaling;0;0,53;1,08;2,6;2,06;0,36;2,31
+IL-7 Signaling Pathway;0;0,52;0,81;1,83;2,7;0,36;1,34
+Antiproliferative Role of Somatostatin Receptor 2;0;0;0,84;2,23;2,06;0,36;1,81
+EGF Signaling;0;0;1,03;2,48;2,02;0;2,04
+ERB2-ERBB3 Signaling;0;0;0;1,54;1,47;0;2,23
+ERBB4 Signaling;0;0;0,65;1,39;1,94;0;2,12
+ERBB Signaling;0;0;0,84;1,71;2,76;0;2,26
+Role of IL-17A in Psoriasis;0;0;2,65;1,09;1,49;0;0,35
+Neurotransmitter release cycle;0;0,78;3,1;1,72;2,25;0,6;0,31
+Isoleucine Degradation I;0;0;1,52;0;3,04;0;0,82
+Valine Degradation I;0;0;1,78;1,06;2,49;0;1,33
+Oxidative Stress Induced Senescence;0;0;1,1;1,27;3,42;0,33;0,56
+Regulation of TP53 Activity through Phosphorylation;0;0;1,38;0,81;1,61;0,84;0,48
+Cellular response to heat stress;0;0;0,79;0,7;1,98;0;1,34
+Glutaryl-CoA Degradation;0;0;1,06;0,22;2,49;0;0
+Tryptophan Degradation III (Eukaryotic);0;0;1,02;0,52;3,34;0;0,21
+TAK1-dependent IKK and NF-kappa-B activation;0;0;0,71;1,1;1,51;0;0,57
+DDX58/IFIH1-mediated induction of interferon-alpha/beta;0;0,53;0,31;0,44;1,18;0;0,98
+Regulation of mRNA stability by proteins that bind AU-rich elements;0;0;0,47;0,55;1,51;0;0,57
+Protein folding;0;0;0,3;0,52;0,59;0,8;0,67
+FLT3 Signaling;0;0;1,44;2,05;1,31;0;0
+Endometrial Cancer Signaling;0;0;0,65;2,6;1,14;0;1,39
+Signaling by NTRK1 (TRKA);0;0;1,02;2,11;1,35;0,93;0,94
+Cargo recognition for clathrin-mediated endocytosis;0;0;0,74;1,02;1,06;0;0
+Agrin Interactions at Neuromuscular Junction;0;0;0,68;1,76;2;0;1,2
+CSDE1 Signaling Pathway;0;0;0;1,14;1,45;0;0,39
+HIPPO signaling;0;0,49;1,1;1,27;0,72;0;0
+RAB GEFs exchange GTP for GDP on RABs;0;0;0,59;1,15;1,52;0;0,8
+Signaling by Insulin receptor;0;0;0,75;0,84;0,91;0;1,01
+Metabolism of cofactors;0;0;1,9;0,71;1,45;0;0,26
+Peroxisomal protein import;0;0;1,13;0,3;2,42;0,43;0,32
+Fatty Acid β-oxidation I;0;0;1,16;0;1,89;0;0
+Mitotic Prophase;0;0;1,05;0,31;1,69;0;0
+Signaling by Erythropoietin;0;0;1,33;1,13;0,6;0;1,75
+SPINK1 General Cancer Pathway;0;0;0,62;1,34;1,27;0;1,59
+IL-2 Signaling;0;0;0,26;2,06;1,05;0;1,33
+WNK Renal Signaling Pathway;0;0;1,72;1,27;1,56;0,27;1,16
+Role of p14/p19ARF in Tumor Suppression;0;0;1,73;1,06;1,62;0;0,85
+Signaling by CSF1 (M-CSF) in myeloid cells;0;0;1,35;1,13;1,71;0;0,88
+Role of CHK Proteins in Cell Cycle Checkpoint Control;0;0;1,03;0,57;0,8;0,46;0,37
+D-myo-inositol-5-phosphate Metabolism;0;0,23;1,08;0,79;0,78;0,38;0,54
+Superpathway of Inositol Phosphate Compounds;0;0;1,09;1,34;1,2;0,29;1,2
+3-phosphoinositide Biosynthesis;0;0,22;0,59;0,72;1,25;0,35;1,05
+3-phosphoinositide Degradation;0;0,24;0,47;0,41;0,62;0,39;0,41
+D-myo-inositol (3,4,5,6)-tetrakisphosphate Biosynthesis;0;0,25;0,62;0,44;0,83;0,42;0,49
+D-myo-inositol (1,4,5,6)-Tetrakisphosphate Biosynthesis;0;0,25;0,62;0,44;0,83;0,42;0,49
+Retinoate Biosynthesis I;0;0;0;0;0,26;0;0,59
+rRNA processing;0;0,86;0;0;0;0;0
+Binding and Uptake of Ligands by Scavenger Receptors;0;0,4;0;0;0;0;0
+GDP-mannose Biosynthesis;0;1,58;0,3;0;0,23;3,12;1,65
+Spermine Biosynthesis;0;0;0;0;0,59;1,84;1,1
+D-mannose Degradation;0;0;0,96;0;0;2,14;1,39
+Phenylalanine Degradation I (Aerobic);0;0;1,22;0,39;0,35;1,54;2,02
+Tyrosine Biosynthesis IV;0;0;0,54;0;0;1,67;2,31
+Amyloid fiber formation;0;1,37;0;0;0,39;0,39;0,75
+NGF processing;0;1,75;0;0,39;1,03;0;0,81
+Antigen Presentation Pathway;0;0;0;0,47;0,56;0;0
+Surfactant metabolism;0;0;0,34;0;0;0;0,21
+Regulation of TP53 Activity through Association with Co-factors;0;0;0,34;0,62;0,53;0;0,96
+Phase II - Conjugation of compounds;0;0,59;0;0;0;0;0
+B-WICH complex positively regulates rRNA expression;0;0,68;0;0,35;0,38;0;0
+GDP-L-fucose Biosynthesis I (from GDP-D-mannose);0;0;0,69;0,64;0;0;0
+Fc epsilon receptor (FCERI) signaling;0;0,22;0;0;0;0;0
+Energy dependent regulation of mTOR by LKB1-AMPK;0;0;0;0;0;0;0,48
+Oxidized GTP and dGTP Detoxification;0;0;0;0;0;0;0,81
+Thiosulfate Disproportionation III (Rhodanese);0;0;0;0,49;0;0;0
+Mitochondrial protein import;0;0;0;0;0,43;0;0
+Mitophagy;0;0;0;0,3;0,41;0;0,91
+Signaling by CSF3 (G-CSF);0;0;0;0;0;0;0,91
+D-glucuronate Degradation I;0;0;0;0,39;0;0;0
+Nucleotide Excision Repair Pathway;0;0;0;0;0;0;0
+Spermidine Biosynthesis I;0;0;0;0;0;0;0
+Amino acids regulate mTORC1;0;0;0;0;0;0;0,73
+mRNA Capping;0;0;0;0;0;0;0
+Processing of SMDT1;0;0;0;0;0;0;0
+Reversible hydration of carbon dioxide;2,01;1,28;0;0;0;0;0,4
+Generic Transcription Pathway;1,32;0,52;0;0,39;0,56;0;0
+Neurotransmitter receptors and postsynaptic signal transmission;2,04;0;0;0;0;0;0
+Triglyceride metabolism;1,56;0;0,29;0;0;0,66;0
+HDR through Homologous Recombination (HRR) or Single Strand Annealing (SSA);0;0;0,48;0;0,45;0,71;0,51
+Transcriptional Regulation by E2F6;0;0;0,8;0;0,5;0;0
+Fanconi Anemia Pathway;0;0;0,95;1,08;0;0;0,33
+4-aminobutyrate Degradation I;0;0;0,54;0,49;1,29;0;0
+RHO GTPases activate KTN1;0;0;0;0;0,74;0;0,43
+Ketone body metabolism;0;0;0;0;0,84;0;0,47
+DNA Double-Strand Break Repair by Homologous Recombination;0;0;0,34;0,28;0,53;0;0,96
+SUMOylation of DNA damage response and repair proteins;0;0;0;0;0,83;0;0,7
+SUMOylation of immune response proteins;0;0;0;0;1,29;0;1,14
+FasL/ CD95L signaling;0;0;0,36;0,32;0,85;0;0
+SUMOylation of DNA replication proteins;0;0;0,68;0,33;1,44;0;0,55
+Arginine Degradation VI (Arginase 2 Pathway);0;0;0,26;0,22;1,24;1,3;1,51
+Effects of PIP2 hydrolysis;0;0;0,79;0,38;0,52;0;1,64
+G alpha (z) signalling events;0;0;0,37;0;1,26;0,53;1,34
+L-glutamine Biosynthesis II (tRNA-dependent);0;0;0;0;1,73;0;1,1
+Interleukin-20 family signaling;0;0;0;0;0;0;1,69
+SUMOylation of transcription factors;0;0;0,43;0;0,28;0;1,33
+Epithelial-Mesenchymal Transition (EMT) during gastrulation;0;0;0;0;0,19;0;1,51
+OAS antiviral response;0;0;0;0;0;0;1,3
+Arginine Degradation I (Arginase Pathway);0;0;0;0;0,28;1,45;0,72
+Lipoate Biosynthesis and Incorporation II;0;0;0;0;0;1,84;0
+CMP-N-acetylneuraminate Biosynthesis I (Eukaryotes);0;0;0;0;0;1,45;0
+Miro GTPase Cycle;0;1,45;0,67;0,6;0;0;0
+Prednisone ADME;0;1,4;0,19;0;0;0;0
+Sucrose Degradation V (Mammalian);0;1,4;0;0;0;1,2;0,5
+Maturity Onset Diabetes of Young (MODY) Signaling;0;1,31;0,31;0,3;0,28;0,95;0
+Vasopressin regulates renal water homeostasis via Aquaporins;0;0;0,3;0,37;0,65;1,41;0,59
+G alpha (q) signalling events;0;0,26;0,36;0,78;1,12;0,87;0,54
+Th2 Pathway;0;0,33;0,47;0,37;0,59;1,73;0,68
+Urea Cycle;0;0;0,26;0;0,61;1,3;0,6
+Superpathway of Citrulline Metabolism;0;0;0,28;0;0,42;0,96;0,31
+RUNX1 and FOXP3 control the development of regulatory T lymphocytes (Tregs);0;1,36;0,53;0,46;0,39;1,15;0
+Rapoport-Luebering Glycolytic Shunt;0;1,75;0,43;0,39;0,35;1,54;0,81
+Cellular hexose transport;0;1,03;0;0,56;0;0,83;1,23
+GDP-glucose Biosynthesis;0;1,32;0,47;0;0,74;1,11;1,14
+Pyruvate Fermentation to Lactate;0;1,58;0;0,27;0,23;1,37;0,65
+GP1b-IX-V activation signalling;0;0;0;0,36;0;0;0,4
+Intrinsic Prothrombin Activation Pathway;1,47;0,77;0;0;0;0;0,61
+FAK Signaling;0,67;0,3;0;0;0;0;0
+Triacylglycerol Degradation;1,33;0;0,35;0;0;0;0
+Pregnenolone Biosynthesis;0;0;0;0;0,45;0;0
+Platelet Aggregation (Plug Formation);0;0;0;0;0;0;0
+Anandamide Degradation;0;0;0;0;0;0;0
+Retinol Biosynthesis;0;0;0;0,27;0;0;0,23
+L-dopachrome Biosynthesis;0;0;0;0,64;0,59;0;1,1
+Glutamate and glutamine metabolism;0;0;0,34;0,62;0,53;0;0,35
+Pentose Phosphate Pathway (Non-oxidative Branch);0;0;0,3;0,27;0;0;0,65
+The Visual Cycle;0;0;0,31;0,24;0;0;0,59
+RHO GTPases activate PAKs;0;0;0,73;0,99;0,5;0;0,23
+Tyrosine Degradation I;0;0;1,03;0,32;0;0;0
+Diphthamide Biosynthesis;0;0;0;0;0;0;0
+D-myo-inositol (1,4,5)-trisphosphate Degradation;0;0;0;0,51;0;0;0
+Threonine catabolism;0;0;0;0;0;0;0
+Assembly and cell surface presentation of NMDA receptors;0;0;2,8;0,84;1,22;0;1,52
+RHO GTPases activate IQGAPs;0;0;2,35;0,77;0,92;0;0,88
+Crosstalk between Dendritic Cells and Natural Killer Cells;0;0;1,75;1,33;1,43;0,31;0,77
+Carboxyterminal post-translational modifications of tubulin;1,44;0;1,69;0,33;0,58;0;1,45
+γ-glutamyl Cycle;0;0;1,48;0,76;0,3;0;1,94
+Translocation of SLC2A4 (GLUT4) to the plasma membrane;0;0;0,84;0,44;0,79;0;2,08
+Pentose phosphate pathway;0;0;1,5;0,69;0,19;1,3;1,51
+Phenylalanine and tyrosine metabolism;0;0;1,61;0,85;0;1,11;0,43
+Leucine Degradation I;0;0;1,19;0;0,45;0;0,5
+Pentose Phosphate Pathway;0;0;0,96;0,4;0;0;1,14
+Gαi Signaling;0;0;0,91;0,9;1,03;2,45;0,67
+Thrombin signalling through proteinase activated receptors (PARs);0;0,87;0,58;1,92;1,62;1,65;0,85
+G Beta Gamma Signaling;0;0;0,63;1,65;1,37;1,84;0,8
+Lactose synthesis;0;1,87;1,48;1,39;1,29;1,67;0,93
+Glycogen Degradation III;0;1,25;1,35;0,69;0,59;1,05;1,01
+Glycogen Degradation II;0;1,32;1,61;0,85;0,74;1,11;1,14
+Rap1 signalling;0;1,16;0,28;0,92;0,42;0;0,31
+Glutathione-mediated Detoxification;0;0,81;1,32;1,08;0,38;0;0,33
+Ascorbate Recycling (Cytosolic);0;1,87;1,48;1,39;1,29;0;0
+Transcriptional regulation by the AP-2 (TFAP2) family of transcription factors;0;1,95;0,72;1,19;1,72;0;0,74
+Glutathione Redox Reactions II;0;1,75;1,22;2,18;1,03;0;0
+Ephrin A Signaling;0;1,69;0,55;1,17;1,91;0;0,49
+N-acetylglucosamine Degradation I;0;1,87;1,48;1,39;1,29;0;0,93
+N-acetylglucosamine Degradation II;0;1,75;1,22;1,12;1,03;0;0,81
+Gamma carboxylation, hypusine formation and arylsulfatase activation;0;0;1,54;1,65;0,31;0;0
+Platelet Adhesion to exposed collagen;0;0;0,66;1;0,47;0;0
+Triacylglycerol Biosynthesis;0;0;0,59;2,21;0,64;0,48;0,39
+Phosphatidylglycerol Biosynthesis II (Non-plastidic);0;0;0,66;0,82;0,41;0,71;0
+CDP-diacylglycerol Biosynthesis I;0;0;0,74;0,93;0,48;0,73;0
+Tetrahydrobiopterin Biosynthesis I;0;0;1,48;0,49;0,45;0;0
+Tetrahydrobiopterin Biosynthesis II;0;0;1,48;0,49;0,45;0;0
+Stearate Biosynthesis I (Animals);0;0;1,1;0,62;0,79;0;0,78
+Mitochondrial L-carnitine Shuttle Pathway;0;0;0,84;0,38;0,31;0;0,74
+Fatty Acid Activation;0;0;1,15;0,25;0;0;0,33
+Pyrimidine Ribonucleotides Interconversion;0;0,78;0,58;0,26;0;1,47;0,65
+Pyrimidine Ribonucleotides De Novo Biosynthesis;0;0,76;0,49;0;0;1,41;0,59
+GPER1 signaling;0;0,74;0,44;0,52;0,82;1,38;0,95
+Dopamine Receptor Signaling;0;0;1,05;0,29;0,91;0,94;0,38
+MAPK targets/ Nuclear events mediated by MAP kinases;0;0;0,85;0,68;0,81;0,67;0,82
+D-myo-inositol (1,3,4)-trisphosphate Biosynthesis;0;0;0,25;1,33;0;0;0,29
+Superpathway of D-myo-inositol (1,4,5)-trisphosphate Metabolism;0;0;0,36;1,36;0,45;0;0,22
+Pentose Phosphate Pathway (Oxidative Branch);0;0;1,03;0,32;0,28;0;0,72
+Urate Biosynthesis/Inosine 5'-phosphate Degradation;0;0;0,73;0,62;0,23;0;0,35
+Signaling by Type 1 Insulin-like Growth Factor 1 Receptor (IGF1R);0;0;0,25;0,46;0,71;0;0,29
+Nephrin family interactions;0;0;0,63;0,52;0,71;0;0,21
+Signaling by NTRK3 (TRKC);0;0;0,25;0,84;0,38;0;0,29
+Protein methylation;0;0;0,25;0,46;0;0;0
+Cilium Assembly;0;0;0,29;0;0;0;0,91
+Apoptotic execution phase;0;0;0,48;0,76;0,79;0,5;0
+Sulfur amino acid metabolism;0;0;0,95;0,48;1,01;0;0
+Nucleotide catabolism;0;0;0,38;0,52;0,66;0;0
+IL-22 Signaling;0;0;0;0,24;0;0;0,59
+Cell Cycle Regulation by BTG Family Proteins;0;0;0;0,3;0;0,62;0
+Processing of Capped Intronless Pre-mRNA;0;0;0,41;0,56;0;0,72;0
+Cleavage and Polyadenylation of Pre-mRNA;0;0;0,8;0,69;0;1,05;0
+L-cysteine Degradation III;0;0;0,54;1,39;0,45;0;0
+Granzyme B Signaling;0;0;0,28;0,92;0,42;0;0
+DNA Double-Strand Break Repair by Non-Homologous End Joining;0;0;0,73;0,62;0,23;0;0
+TCA Cycle II (Eukaryotic);0;0;0;0;0,71;0;0
+2-ketoglutarate Dehydrogenase Complex;0;0;0,43;0;0,35;0;0
+Purine Nucleotides De Novo Biosynthesis II;0;0;0,47;0;0,74;0;0,43
+Signaling by Leptin;0;0;0,47;0,85;0,34;0;0,43
+Basal Cell Carcinoma Signaling;1,24;0,56;0,81;1,3;0,56;0,39;0,24
+Heparan Sulfate Biosynthesis (Late Stages);1,18;0;0,54;0,69;0,34;0;0
+Heparan Sulfate Biosynthesis;1,14;0;0,76;0,69;0,47;0;0
+Phase I - Functionalization of compounds;0;0;0,86;0,96;1,02;0;0,62
+Airway Pathology in Chronic Obstructive Pulmonary Disease;0;0;0,86;0,91;1,32;0,68;0,45
+GPVI-mediated activation cascade;0;0;0,76;0,9;1,02;0;0,77
+Chondroitin and Dermatan Biosynthesis;0;0;0,3;0,27;1,43;0;0
+Chondroitin Sulfate Biosynthesis (Late Stages);0;0;0,45;0,5;0,75;0;0
+Chondroitin Sulfate Biosynthesis;0;0;0,67;0,49;0,92;0;0
+Dermatan Sulfate Biosynthesis;0;0;0,85;0,86;1,38;0;0
+Nucleosome assembly;0;0,71;0,81;1,51;1,54;0,52;1,31
+Role of OCT4 in Mammalian Embryonic Stem Cell Pluripotency;0;0;0,92;2,12;1,05;0,55;0,93
+Activation of kainate receptors upon glutamate binding;0;0;0,38;1,19;0,66;0,71;1,49
+Dermatan Sulfate Degradation (Metazoa);0;0;0,56;1,33;0,71;0;1,52
+Chondroitin Sulfate Degradation (Metazoa);0;0;0,61;1,43;1,25;0;1,59
+Coagulation System;0;0;0,76;1,26;1,38;0;1,27
+Nucleotide salvage;0;0;1,16;0,99;1,25;0;1,28
+NR1D1 (REV-ERBA) represses gene expression;0;0;1,22;1,12;1,03;0;2,02
+Th1 Pathway;0;0,37;0,91;0,94;1,55;0,65;2,31
+nNOS Signaling in Neurons;0;0;0,88;0,68;1,32;0;1,93
+Growth hormone receptor signaling;0;0;1,41;1,68;0,65;0,8;0,59
+FOXO-mediated transcription of oxidative stress, metabolic and neuronal genes;0;0;1,9;1,62;0,41;0,71;0,46
+Phosphatidylethanolamine Biosynthesis II;0;0;1,95;1,78;0,45;0;0,5
+Eicosanoid Signaling;0;0;2,14;1,7;1,05;0;1,18
+Spermine and Spermidine Degradation I;0;0;2,33;1,12;1,03;0;0,81
+Nicotinate metabolism;0;0;1,42;1,23;0,65;0;0,78
+Serotonin Degradation;0;0;0,58;0,57;0,26;0;0
+Tumoricidal Function of Hepatic Natural Killer Cells;0;0;0,95;1,2;0,65;0;0,2
+Thioredoxin Pathway;0;0;0,77;0,69;0,61;0;0,6
+Serine biosynthesis;0;0;1,33;1,2;0,52;0;0
+TBC/RABGAPs;0;0;0,47;1,1;0,61;0;0
+Arsenate Detoxification I (Glutaredoxin);0;0;1,03;0,94;0,85;0;0
+FOXO-mediated transcription of cell death genes;0;0;1,06;1,43;0,42;0;0
+Transcriptional regulation of pluripotent stem cells;0;0;0,98;1,33;0,71;0;0,29
+Glutamate binding, activation of AMPA receptors and synaptic plasticity;0;0;1,73;1,46;1,21;0;0,42
+Melatonin Degradation II;0;0;1,22;1,12;1,03;0;0,81
+Cysteine Biosynthesis/Homocysteine Degradation;0;0;1,93;0,64;1,73;0;0
+Ceramide Biosynthesis;0;0;1,5;1,36;1,24;0;0
+Acetate Conversion to Acetyl-CoA;0;0;1,03;0,94;0,85;0;0
+TYSND1 cleaves peroxisomal proteins;0;0;0,77;0,69;2,07;0;0,6
+Tryptophan Degradation to 2-amino-3-carboxymuconate Semialdehyde;0;0;0,3;0,8;1,43;0;0,65
+NAD biosynthesis II (from tryptophan);0;0;0,8;1,2;1,63;0;0,38
+PI3K Cascade;0;0;0,71;0,8;1,16;0,56;0,27
+Histamine Degradation;0;0;0,73;1,46;1,25;0;0,23
+Serine Biosynthesis;0;0;1,48;1,39;1,29;0;0
+Formation of lateral plate mesoderm;0;0;1,03;0,94;1,69;0;0
+Neurovascular Coupling Signaling Pathway;0;0;1,75;1,64;1,02;0,3;0
+Salvage Pathways of Pyrimidine Deoxyribonucleotides;0;0;1,95;1,06;0,95;0;0
+Selenocysteine Biosynthesis II (Archaea and Eukaryotes);0;0;1,7;1,57;0,72;0;0,65
+Airway Inflammation in Asthma;0;0;0,85;1,01;1,15;0;0,41
+Activation of Matrix Metalloproteinases;0;0;1,22;1,01;0,54;0;0,41
+Vitamin D (calciferol) metabolism;0;0;0,87;1,31;0,66;0;1,08
+Bile Acid Biosynthesis, Neutral Pathway;0;0;1,06;1,43;1,25;0;0,86
+D-myo-inositol (1,4,5)-Trisphosphate Biosynthesis;0;0;0,84;1,5;0,32;0;1,05
+Fcγ Receptor-mediated Phagocytosis in Macrophages and Monocytes;0;0;1,34;1,47;0,87;0;1,41
+Trafficking and processing of endosomal TLR;0;0;0,8;1,2;1,05;0;1,01
+Regulation of NFE2L2 gene expression;0;0;0,54;1,39;1,29;0;0,93
+Reelin signalling pathway;0;0;1,03;0,94;0,85;0;0,72
+Notch Signaling;0;0;0,95;1,08;1,18;0;0,69

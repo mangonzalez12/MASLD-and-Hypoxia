@@ -1,0 +1,367 @@
+
+```{r}
+## Script to perform differential expression analysis using DEseq2 in the IOX2 experiment
+library(DESeq2)
+library(ggplot2)
+library(utils)
+library(readr)
+library(dplyr)
+library(pheatmap)
+library(biomaRt)
+library(openxlsx)
+library(clusterProfiler)
+library(org.Hs.eg.db)
+#library(ComplexUpset)
+library(readxl)
+library(fgsea)
+#library(tidyverse)
+library(tidyr)
+
+```
+
+```{r}
+## A function to remove decimals
+remove_decimals <- function(cts){
+  genes_with_decimals <-rownames(cts)
+  genes_without_decimals<-gsub("\\..*", "", genes_with_decimals)
+  rownames(cts) <- genes_without_decimals
+  return(cts)
+}
+
+### Make gene symbol database from ENSEMBLS in study
+makeGeneSymbols_db <- function(data_frame) {
+  require("biomaRt")
+  
+  # Get gene Symbols in all study
+  ensembl <- useMart(biomart = "ensembl", dataset = "hsapiens_gene_ensembl")
+  attributes <- c("ensembl_gene_id", "external_gene_name")
+
+  # Retrieve gene symbols based on Ensembl IDs from your data frame
+  gene_ids <- rownames(data_frame)
+  gene_info <- getBM(attributes, filters = "ensembl_gene_id", values = gene_ids, mart = ensembl)
+  colnames(gene_info) <- c("ENSEMBL_ID", "Gene_Symbol")
+  
+  return(gene_info)
+}
+#Get gene SYMBOLS, gene_data is db
+map_gene_symbols_from_db <- function(ensembl_ids, gene_data) {
+  match_indices <- match(rownames(ensembl_ids), gene_data$ENSEMBL_ID)
+  gene_symbols <- gene_data$Gene_Symbol[match_indices]
+  return(gene_symbols)
+}
+
+
+# Function to filter and order DESeq2 results by pvalue
+# extract differentially expressed genes, and map gene symbols
+process_deseq_results <- function(results, pval=NULL, db) {
+  # Filter and order results by adjusted p-value
+  results <- results[order(results$pvalue),]
+  
+  # Check if pval is provided before filtering
+  if (!is.null(pval)) {
+    # Get differentially expressed genes based on the p-value threshold
+    DEGs <- as.data.frame(subset(results, pvalue < pval))
+  } else {
+    DEGs <- as.data.frame(results)
+  }
+  
+  # Map DEGs to the database of gene symbols
+  symbol_result <- map_gene_symbols_from_db(DEGs, db)
+  
+  # Add the gene symbol column to DEGs
+  DEGs$Symbol <- symbol_result
+  
+  return(DEGs)
+}
+# Process a list of dataframes for deseq2
+process_list_of_deseq_results <- function(results_list, pval=NULL, db) {
+  processed_list <- list()
+  
+  for (i in seq_along(results_list)) {
+    processed_df <- process_deseq_results(results_list[[i]], pval, db = db)
+    processed_list[[i]] <- processed_df
+  }
+  
+  return(processed_list)
+}
+```
+
+
+```{r}
+# Define path of files
+cts_path <- "Data/raw_cts_DESEQ2_prep.csv"
+meta_path <- "Data/meta_iox2.csv"
+
+# Read csv files
+cts <- read.csv(cts_path, header = TRUE, row.names = 1, sep = ";")
+meta <- read.csv(meta_path, header = TRUE, ";")
+
+
+```
+
+```{r}
+# Check dimensions of datasets
+dim(cts)
+dim(meta)
+
+```
+```{r}
+# Check order of samples
+colnames(cts)==meta$Sample
+```
+
+```{r}
+# Remove decimals from ENS ids
+cts <- remove_decimals(cts = cts)
+```
+
+```{r}
+# Retrieve gene symbols based on Ensembl IDs from your data frame to map DEGs
+db <- makeGeneSymbols_db(cts)
+
+# Define the relative path to the output CSV file
+file_output <- "Output/gene_info.csv"
+
+# Write the db object to a CSV file in the Output directory
+write.csv(db, file = file_output, row.names = FALSE)
+
+# Print a message indicating the file has been written
+cat("CSV file written to:", file_output)
+
+```
+
+```{r}
+#Check
+dim(db)
+head(db)
+```
+
+
+```{r}
+# DESEQ2 prep
+## Factor the treatment variable in metadata
+meta$group <- factor(meta$group)
+meta$group
+```
+```{r}
+## Specify the reference group one for control
+reference_group <- "C"
+```
+
+```{r}
+## Set the reference level for the group variable in the file
+meta$group <- relevel(meta$group, ref = reference_group)
+```
+
+
+
+## Specifi TGFB (T) as reference
+reference_group <- "T"
+## Specify TGFB (T) + IOX0.3
+reference_group <- "T+IOX0.3"
+
+
+```{r}
+## Create a DESeqDataSet object
+dds <- DESeqDataSetFromMatrix(countData = cts, colData = meta, design = ~group)
+```
+
+
+```{r}
+## Perform the differential expression analysis
+dds <- DESeq(dds, betaPrior = FALSE)
+```
+
+```{r}
+## See results for the multiple comparisons
+resultsNames(dds)
+
+```
+
+```{r}
+## Extract the results for each comparison 
+group_IOX_0_3_vs_C <- results(dds, name = "group_IOX_0_3_vs_C")
+group_IOX_1_vs_C <- results(dds, name = "group_IOX_1_vs_C")
+group_T_vs_C <- results(dds, name = "group_T_vs_C")
+group_T_A_vs_C <- results(dds, name = "group_T_A_vs_C")
+group_T_IOX0.3_vs_C <- results(dds, name = "group_T_IOX0.3_vs_C")
+group_T_IOX0.3_A_vs_C <- results(dds, name = "group_T_IOX0.3_A_vs_C")
+group_T_IOX1_vs_C <- results(dds, name =  "group_T_IOX1_vs_C")
+
+```
+
+```{r}
+## Results with reference to Control
+results_list <- list(group_IOX_0_3_vs_C, group_IOX_1_vs_C, group_T_vs_C, group_T_A_vs_C, group_T_IOX0.3_vs_C, group_T_IOX0.3_A_vs_C, group_T_IOX1_vs_C)
+```
+
+```{r}
+# Process one dataframe with pval filter 
+DEGs <- process_deseq_results(group_T_vs_C, pval = 0.01, db)
+head(DEGs)
+DEGs
+```
+
+```{r}
+## Process list of dataframes and filter by pval < 0.01 or NULL for all genes
+filtered_df <- process_list_of_deseq_results(results_list, pval = 0.01, db)
+```
+
+
+```{r}
+## Write a CSV file with DEGs for each  comparison to examine separately
+
+# Output directory
+output_dir <- "Output/Deseq2/in vitro"
+
+# Get results names excluding "Intercept"
+results_names <- resultsNames(dds)[-1]
+
+# Iterate through the list of data frames
+for (i in seq_along(filtered_df)) {
+  # Construct the file name
+  file_name <- paste(output_dir, "/df", i, "_", results_names[i], ".csv", sep="")
+  
+  # Write the data frame to CSV
+  write.csv2(filtered_df[[i]], file = file_name)
+}
+
+
+```
+
+
+
+####################################################################################################################################################
+
+####################################################################################################################################################
+
+####################################################################################################################################################
+
+####################################################################################################################################################
+
+####################################################################################################################################################
+
+####################################################################################################################################################
+
+
+#Analysis of TGFB as reference
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+## Specify the reference group one for control
+reference_group <- "T"
+```
+
+```{r}
+## Set the reference level for the group variable in the file
+meta$group <- relevel(meta$group, ref = reference_group)
+```
+
+
+
+```{r}
+## Create a DESeqDataSet object
+dds_t <- DESeqDataSetFromMatrix(countData = cts, colData = meta, design = ~group)
+```
+
+
+```{r}
+## Perform the differential expression analysis
+dds_t <- DESeq(dds_t, betaPrior = FALSE)
+```
+
+```{r}
+## See results for the multiple comparisons
+resultsNames(dds_t)
+
+```
+
+```{r}
+## Extract the results for each comparison 
+group_C_vs_T <- results(dds_t, name = "group_C_vs_T")
+group_IOX_0_3_vs_T <- results(dds_t, name = "group_IOX_0_3_vs_T")
+group_IOX_1_vs_T <- results(dds_t, name = "group_IOX_1_vs_T")
+group_T_A_vs_T <- results(dds_t, name = "group_T_A_vs_T")
+group_T_IOX0.3_vs_T <- results(dds_t, name = "group_T_IOX0.3_vs_T")
+group_T_IOX0.3_A_vs_T <- results(dds_t, name = "group_T_IOX0.3_A_vs_T")
+group_T_IOX1_vs_T <- results(dds_t, name =  "group_T_IOX1_vs_T")
+
+```
+
+```{r}
+## Results with reference to Control
+results_list2 <- list(group_C_vs_T, group_IOX_0_3_vs_T, group_IOX_1_vs_T, group_T_A_vs_T, group_T_IOX0.3_vs_T, group_T_IOX0.3_A_vs_T, group_T_IOX1_vs_T)
+```
+
+```{r}
+# Process one dataframe with pval filter 
+DEGs_t <- process_deseq_results(group_T_IOX1_vs_T, pval = 0.01, db)
+head(DEGs_t)
+DEGs_t
+```
+
+```{r}
+## Process list of dataframes and filter by pval < 0.01 or NULL for all genes
+filtered_df_t <- process_list_of_deseq_results(results_list2, pval = 0.01, db)
+```
+
+
+```{r}
+## Write a CSV file with DEGs for each  comparison to examine separately
+
+# Output directory
+output_dir <- "Output/Deseq2/in_vitro"
+
+# Get results names excluding "Intercept"
+results_names <- resultsNames(dds_t)[-1]
+
+# Iterate through the list of data frames
+for (i in seq_along(filtered_df_t)) {
+  # Construct the file name
+  file_name <- paste(output_dir, "/df", i, "_", results_names[i], ".csv", sep="")
+  
+  # Write the data frame to CSV
+  write.csv2(filtered_df_t[[i]], file = file_name)
+}
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

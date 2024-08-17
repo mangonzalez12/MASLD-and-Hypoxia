@@ -1,0 +1,210 @@
+
+```{r}
+## Script to make a UMAP plot
+library(DESeq2)
+library(ggplot2)
+library(utils)
+library(readr)
+library(dplyr)
+library(pheatmap)
+library(biomaRt)
+library(openxlsx)
+library(umap)
+library(colorspace)
+```
+
+
+```{r}
+## A function to remove decimals
+remove_decimals <- function(cts){
+  genes_with_decimals <-rownames(cts)
+  genes_without_decimals<-gsub("\\..*", "", genes_with_decimals)
+  rownames(cts) <- genes_without_decimals
+  return(cts)
+}
+
+### Write a function to normalize data as follows: 
+##   nCts = (raw_gene_value/total sum each sample)*average(total sum of samples)
+normalize <- function(cts){
+  vector <- colSums(cts)
+  average_sum<-mean(colSums(cts))
+  cts.sweep <- sweep(cts, MARGIN = 2, STATS =vector, '/') 
+  cts.norm   <- cts.sweep * average_sum
+  return(cts.norm)
+}
+
+### Write a function to normalize for healthy samples as follows:
+##    2logR = log2(nCts/mean(healthy sample average per row (genes from healthy samples)))
+transformation_Rlog_invitro<-function(cts.norm){
+  #boolean_healthy<-meta$group=="C"
+  boolean_healthy<-meta$group=="C"
+  healthy_samples= cts.norm[,boolean_healthy]
+  healthy_samples_means <-rowMeans(healthy_samples)
+  cts.r2log<-log2((cts.norm)/ (healthy_samples_means)) ### Add integer to avoid negative values
+  return(cts.r2log)
+}
+# PCA plot function
+
+create_PCA_plot <- function(pca_data, Colors, plot_title, group, filename, xlab, ylab) {
+  # Create a scatter plot of the UMAP results
+  pca_plot <- ggplot(pca_data, aes(x = PC1, y = PC2, color = .data[[group]])) +  
+    geom_point(size = 6) +
+    scale_color_manual(values = Colors) +
+    labs(color = group) +
+    xlab(xlab) +
+    ylab(ylab) +
+    theme_minimal() +
+    theme(plot.title = element_text(size = 18), axis.text = element_text(size = 10), legend.text = element_text(size = 10))
+  
+  # Set the title
+  pca_plot <- pca_plot + ggtitle(plot_title)
+  
+  print(pca_plot)
+  
+  ggsave(filename, pca_plot, width = 12, height = 8, dpi = 400)
+}
+```
+
+
+```{r}
+# Define path of files
+cts_path <- "Data/raw_cts_DESEQ2_prep.csv"
+meta_path <- "Data/meta_iox2.csv"
+
+# Read csv files
+cts <- read.csv(cts_path, header = TRUE, row.names = 1, sep = ";")
+cts <- remove_decimals(cts = cts)
+meta <- read.csv(meta_path, header = TRUE, ";", row.names = 1)
+```
+
+
+```{r}
+# DESEQ2 prep
+## Factor the treatment variable in metadata
+meta$group <- factor(meta$group)
+meta$group
+```
+```{r}
+## Create a DESeqDataSet object
+dds <- DESeqDataSetFromMatrix(countData = cts, colData = meta, design = ~group)
+```
+
+
+```{r}
+## Add vst normalization of the data
+vst <- varianceStabilizingTransformation(dds, blind = FALSE)
+
+cts_vst <- assay(vst)
+#cts_vst
+
+```
+
+```{r}
+plotPCA(vst, intgroup="group", ntop=17336)
+```
+
+```{r}
+# Transpose the matrix
+df <- t(cts_vst)
+df <- as.matrix(df)
+dim(df)
+#df
+```
+
+```{r}
+
+##########################################################
+#                           PCA
+# Perform PCA on df
+set.seed(1234)
+pca_result <- prcomp(df, scale. = TRUE)
+
+summary(pca_result)
+pca_data <- as.data.frame(pca_result$x[,c(1,2)])
+pca_data
+```
+
+```{r}
+# Add grouping variable as a factor
+rownames(pca_data)==rownames(meta)
+meta$group
+pca_data$group <- factor(meta$group)
+pca_data
+```
+
+
+```{r}
+# Calculate the cumulative proportion of variance explained
+sum <- summary(pca_result)
+dim(sum$importance)
+sum
+```
+```{r}
+# Choose color for 8 groups
+#pal<-choose_palette()
+Patient_Colors <- c(C="#023FA5", IOX_0_3="#727EB5", IOX_1="#AEB2CD", T="#D8D9DE", T_A="#DFD7D9", T_IOX0.3="#D0AAB1", T_IOX0.3_A="#B56B7A", T_IOX1="#8E063B")
+```
+
+
+```{r}
+
+# Save PCA plot
+create_PCA_plot(pca_data, Patient_Colors, plot_title="PCA plot IOX2 experiment vst", group="group", filename="Output/PCA/PCA plot IOX2 EXPERIMENT_vst.png", xlab="36.23% Explained variance", ylab="19.72% Explained variance")
+
+```
+
+
+```{r}
+###########################################################
+# Data normalization for visualization with 2LOGRtransformation
+#### Check order between meta ordered and cts ordered
+rownames(meta)==colnames(cts)
+```
+
+```{r}
+###Use function to normalize
+normalized_cts<-normalize(cts = cts)#Normalized to control samples
+dim(normalized_cts)## see dimensions
+head(normalized_cts)## see values
+```
+
+```{r}
+###Use function to transform normalized cts to 2logR values
+cts.2logr<-transformation_Rlog_invitro(normalized_cts)
+cts.2logr
+dim(cts.2logr)
+```
+
+
+```{r}
+##########################################################
+#                           PCA
+# Perform PCA on df
+set.seed(1234)
+df <- t(normalized_cts)
+pca_result <- prcomp(df, scale. = TRUE)
+
+summary(pca_result)
+pca_data <- as.data.frame(pca_result$x[,c(1,2)])
+pca_data
+# See simple plot
+plot(pca_data[,1], pca_data[,2])
+
+# Add grouping variable as a factor
+rownames(pca_data)==rownames(meta)
+meta$group
+pca_data$group <- factor(meta$group)
+pca_data
+```
+
+```{r}
+# Calculate the cumulative proportion of variance explained
+sum <- summary(pca_result)
+dim(sum$importance)
+sum
+```
+```{r}
+# Save PCA plot
+create_PCA_plot(pca_data, Patient_Colors, plot_title="PCA plot IOX2 experiment", group="group", filename="Output/PCA/PCA plot IOX2 EXPERIMENT_normzalized_cts.png", xlab="36.23% Explained variance", ylab="19.72% Explained variance")
+```
+

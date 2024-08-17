@@ -1,0 +1,233 @@
+
+```{r}
+## Script to perform differential expression analysis using DEseq2 in the IOX2 experiment
+library(DESeq2)
+library(ggplot2)
+library(utils)
+library(readr)
+library(dplyr)
+library(pheatmap)
+library(biomaRt)
+library(clusterProfiler)
+library(fgsea)
+library(org.Hs.eg.db)
+#library(ComplexUpset)
+library(readxl)
+library(fgsea)
+#library(tidyverse)
+library(tidyr)
+
+```
+
+```{r}
+# Define a function to replace commas with dots and convert to numeric
+convert_to_numeric <- function(x) {
+  as.numeric(gsub(",", ".", x))
+}
+
+### Function to round values 
+round_df <- function(x, digits) {
+  # round all numeric variables
+  # x: data frame 
+  # digits: number of digits to round
+  numeric_columns <- sapply(x, mode) == 'numeric'
+  x[numeric_columns] <-  round(x[numeric_columns], digits)
+  x
+}
+
+### Make gene symbol database from ENSEMBLS in study
+makeGeneSymbols_db <- function(data_frame) {
+  require("biomaRt")
+  
+  # Get gene Symbols in all study
+  ensembl <- useMart(biomart = "ensembl", dataset = "hsapiens_gene_ensembl")
+  attributes <- c("ensembl_gene_id", "external_gene_name")
+
+  # Retrieve gene symbols based on Ensembl IDs from your data frame
+  gene_ids <- rownames(data_frame)
+  gene_info <- getBM(attributes, filters = "ensembl_gene_id", values = gene_ids, mart = ensembl)
+  colnames(gene_info) <- c("ENSEMBL_ID", "Gene_Symbol")
+  
+  return(gene_info)
+}
+#Get gene SYMBOLS, gene_data is db
+map_gene_symbols_from_db <- function(ensembl_ids, gene_data) {
+  match_indices <- match(rownames(ensembl_ids), gene_data$ENSEMBL_ID)
+  gene_symbols <- gene_data$Gene_Symbol[match_indices]
+  return(gene_symbols)
+}
+
+
+# Function to filter and order DESeq2 results by pvalue
+# extract differentially expressed genes, and map gene symbols
+process_deseq_results <- function(results, pval=NULL, db) {
+  # Filter and order results by adjusted p-value
+  results <- results[order(results$pvalue),]
+  
+  # Check if pval is provided before filtering
+  if (!is.null(pval)) {
+    # Get differentially expressed genes based on the p-value threshold
+    DEGs <- as.data.frame(subset(results, pvalue < pval))
+  } else {
+    DEGs <- as.data.frame(results)
+  }
+  
+  # Map DEGs to the database of gene symbols
+  symbol_result <- map_gene_symbols_from_db(DEGs, db)
+  
+  # Add the gene symbol column to DEGs
+  DEGs$Symbol <- symbol_result
+  
+  return(DEGs)
+}
+# Process a list of dataframes for deseq2
+process_list_of_deseq_results <- function(results_list, pval=NULL, db) {
+  processed_list <- list()
+  
+  for (i in seq_along(results_list)) {
+    processed_df <- process_deseq_results(results_list[[i]], pval, db = db)
+    processed_list[[i]] <- processed_df
+  }
+  
+  return(processed_list)
+}
+```
+
+
+```{r}
+# Define path of files
+cts_path <- "Data/human_cts.csv"
+meta_path <- "Data/govaere_meta.csv"
+
+# Read csv files
+mat <- read.csv(cts_path, header = TRUE, row.names = 1, sep = ";")
+meta <- read.csv(meta_path, header = TRUE, ",")
+
+# Replace commas with dots
+# Apply the function to all columns of the dataframe
+mat[] <- lapply(mat, convert_to_numeric)
+
+# convert to cts name and round values for DESEQ2
+cts <- round_df(mat)
+```
+
+```{r}
+# Check dimensions of datasets
+dim(cts)
+dim(meta)
+
+```
+```{r}
+# Check order of samples
+colnames(cts)==meta$Sample
+```
+
+```{r}
+# Retrieve gene symbols based on Ensembl IDs from your data frame to map DEGs
+db <- makeGeneSymbols_db(cts)
+
+# Define the relative path to the output CSV file
+file_output <- "Output/gene_info_human.csv"
+
+# Write the db object to a CSV file in the Output directory
+write.csv(db, file = file_output, row.names = FALSE)
+
+# Print a message indicating the file has been written
+cat("CSV file written to:", file_output)
+
+```
+
+```{r}
+#Check
+dim(db)
+head(db)
+```
+
+
+```{r}
+# DESEQ2 prep
+## Factor the treatment variable in metadata
+meta$Fibrosis_stage <- factor(meta$Fibrosis_stage)
+meta$Fibrosis_stage
+```
+```{r}
+## Specify the reference Fibrosis_stage for level 0
+reference_group <- "0"
+```
+
+```{r}
+## Set the reference level for the Fibrosis_stage variable in the file
+meta$Fibrosis_stage <- relevel(meta$Fibrosis_stage, ref = reference_group)
+```
+
+
+```{r}
+## Create a DESeqDataSet object
+dds <- DESeqDataSetFromMatrix(countData = cts, colData = meta, design = ~Fibrosis_stage)
+```
+
+
+```{r}
+## Perform the differential expression analysis
+dds <- DESeq(dds, betaPrior = FALSE)
+```
+
+```{r}
+## See results for the multiple comparisons
+resultsNames(dds)
+
+```
+
+```{r}
+## Extract the results for each comparison 
+group_Fibrosis_stage_1_vs_0 <- results(dds, name = "Fibrosis_stage_1_vs_0")
+group_Fibrosis_stage_2_vs_0 <- results(dds, name = "Fibrosis_stage_2_vs_0")
+group_Fibrosis_stage_3_vs_0 <- results(dds, name = "Fibrosis_stage_3_vs_0")
+group_Fibrosis_stage_4_vs_0 <- results(dds, name = "Fibrosis_stage_4_vs_0")
+
+
+
+```
+
+```{r}
+## Results with reference to Control
+results_list <- list(group_Fibrosis_stage_1_vs_0, group_Fibrosis_stage_2_vs_0, group_Fibrosis_stage_3_vs_0, group_Fibrosis_stage_4_vs_0)
+```
+
+```{r}
+# Process one dataframe with pval filter 
+DEGs <- process_deseq_results(group_Fibrosis_stage_4_vs_0, pval = 0.01, db)
+head(DEGs)
+DEGs
+```
+
+```{r}
+## Process list of dataframes and filter by pval < 0.01 or NULL for all genes
+filtered_df <- process_list_of_deseq_results(results_list, pval = 0.01, db)
+```
+
+
+```{r}
+## Write a CSV file with DEGs for each  comparison to examine separately
+
+# Output directory
+output_dir <- "Output/Deseq2/Human"
+
+# Get results names excluding "Intercept"
+results_names <- resultsNames(dds)[-1]
+
+# Iterate through the list of data frames
+for (i in seq_along(filtered_df)) {
+  # Construct the file name
+  file_name <- paste(output_dir, "/df", i, "_", results_names[i], ".csv", sep="")
+  
+  # Write the data frame to CSV
+  write.csv2(filtered_df[[i]], file = file_name)
+}
+
+
+```
+
+
+
+

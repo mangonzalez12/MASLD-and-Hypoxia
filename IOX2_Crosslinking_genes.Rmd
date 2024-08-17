@@ -1,0 +1,192 @@
+
+
+
+```{r}
+library(DESeq2)
+library(ggplot2)
+library(utils)
+library(readr)
+library(dplyr)
+library(pheatmap)
+
+```
+
+
+```{r}
+## A function to remove decimals
+remove_decimals <- function(cts){
+  genes_with_decimals <-rownames(cts)
+  genes_without_decimals<-gsub("\\..*", "", genes_with_decimals)
+  rownames(cts) <- genes_without_decimals
+  return(cts)
+}
+
+### Write a function to normalize data as follows: 
+##   nCts = (raw_gene_value/total sum each sample)*average(total sum of samples)
+normalize <- function(cts){
+  vector <- colSums(cts)
+  average_sum<-mean(colSums(cts))
+  cts.sweep <- sweep(cts, MARGIN = 2, STATS =vector, '/') 
+  cts.norm   <- cts.sweep * average_sum
+  return(cts.norm)
+}
+
+### Write a function to normalize for healthy samples as follows:
+##    2logR = log2(nCts/mean(healthy sample average per row (genes from healthy samples)))
+transformation_Rlog_invitro<-function(cts.norm){
+  #boolean_healthy<-meta$group=="C"
+  boolean_healthy<-meta$group=="C"
+  healthy_samples= cts.norm[,boolean_healthy]
+  healthy_samples_means <-rowMeans(healthy_samples)
+  cts.r2log<-log2((cts.norm)/ (healthy_samples_means)) ### Add integer to avoid negative values
+  return(cts.r2log)
+}
+```
+
+
+```{r}
+# Define path of files
+cts_path <- "Data/raw_cts_DESEQ2_prep.csv"
+meta_path <- "Data/meta_iox2.csv"
+
+# Read csv files
+cts <- read.csv(cts_path, header = TRUE, row.names = 1, sep = ";")
+cts <- remove_decimals(cts = cts)
+meta <- read.csv(meta_path, header = TRUE, ";", row.names = 1)
+
+
+# Load files
+# Change directory where files are stored from Deseq2 analysis
+setwd(file.path("Data"))
+
+hallmark <- read.csv("crosslinking_genes.csv", sep = ";", header = TRUE)
+hallmark
+```
+
+
+
+```{r}
+###########################################################
+# Data normalization for visualization with 2LOGRtransformation
+#### Check order between meta ordered and cts ordered
+rownames(meta)==colnames(cts)
+```
+
+```{r}
+###Use function to normalize
+normalized_cts<-normalize(cts = cts)#Normalized to control samples
+dim(normalized_cts)## see dimensions
+head(normalized_cts)## see values
+
+```
+
+```{r}
+###Use function to transform normalized cts to 2logR values
+cts.2logr<-transformation_Rlog_invitro(normalized_cts)
+cts.2logr
+dim(cts.2logr)
+```
+
+
+```{r}
+#Subset cts 2logr matrix by crosslinking genes
+cts.2logr <- cts.2logr[hallmark$ENS_id,]
+dim(cts.2logr)
+head(cts.2logr, 12)
+```
+
+```{r}
+
+meta$group <- factor(meta$group)
+# Change colnames with group
+colnames(cts.2logr)
+colnames(cts.2logr)<- meta$group
+cts.2logr
+```
+```{r}
+#Extract only controls, IOXS and TGFBs plus combinations (remove alk5 conditions)
+
+# Specify the columns to keep
+
+
+
+#columns_to_keep <- colnames(cts.2logr)[!colnames(cts.2logr) %in% c("T_A", "T_IOX0.3_A")]
+
+# Keep only the specified columns
+
+#cts.2logr <- cts.2logr[, columns_to_keep]
+
+# Check the resulting dataframe
+
+#colnames(cts.2logr)
+
+
+
+
+
+
+```
+```{r}
+#Rename columns due to change
+new_names <-  c("C", "C",  "IOX_0_3", "IOX_0_3",  "IOX_1", "IOX_1", "T", "T", "T_IOX0.3", "T_IOX0.3", "T_IOX1", "T_IOX1")  
+
+#colnames(cts.2logr) <-new_names
+
+
+
+```
+
+```{r}
+# Add names instead of ENSEMBL ids
+gene_symbols <- hallmark$Symbol
+```
+
+
+
+
+```{r}
+###############################################################
+setwd(file.path("Output", "Crosslinking_genes"))
+
+width_fib <- 15
+height_fib <- 50
+
+#Color
+#colors_fib <- Colors
+
+# Heatmap Canon
+ht_fib <-pheatmap(
+  cts.2logr,
+  cluster_rows=F,
+  show_rownames=T,
+  cluster_cols=F,
+  border_color = "grey", 
+  #color = colors_fib, 
+  fontsize_row = 12,
+  fontsize_col = 12, 
+  fontsize = 8,
+  cellwidth = 20,
+  cellheight = 20,
+  labels_row = gene_symbols,
+  width = width_hypox,
+  height = height_hypox,
+  legend = TRUE,
+  display_numbers = TRUE,
+  main = "Crosslinking markers in distinct conditions"
+)
+
+
+# 16 samples clustered by hypoxia Hallmark genes pdf
+pdf("Samples using Crosslinking genes comparison IOX concentrations_numbers.pdf", width = width_fib, height = height_fib)
+print(ht_fib)
+dev.off()
+
+print(ht_fib)
+
+# 16 comparisons save a PNG plot
+ggsave("Samples using Crosslinking genes comparison IOX concentrations_numbers.png", plot = ht_fib, width = width_fib, height = height_fib, dpi=400, limitsize = FALSE)
+
+##############################################################
+```
+
+

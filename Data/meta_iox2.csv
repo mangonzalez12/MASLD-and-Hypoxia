@@ -1,0 +1,17 @@
+﻿Sample;group;Fibrosis_label;
+TNO_01;C;Fibrosis_0;Control
+TNO_02;C;Fibrosis_0;Control
+TNO_03;IOX_0_3;;IOX2 0.3  µM
+TNO_04;IOX_0_3;;I 0.3  µm
+TNO_05;IOX_1;;I 1 µM
+TNO_06;IOX_1;;I 1 µM
+TNO_07;T;;T
+TNO_08;T;;T
+TNO_09;T_A;;T A
+TNO_10;T_A;; T A
+TNO_11;T_IOX0.3;;T I 0.3  µm
+TNO_12;T_IOX0.3;;T I 0.3  µm
+TNO_13;T_IOX0.3_A;;T I 0.3  µm A
+TNO_14;T_IOX0.3_A;;T I 0.3  µm A
+TNO_15;T_IOX1;;T I 1  µm
+TNO_16;T_IOX1;;T I 1  µm

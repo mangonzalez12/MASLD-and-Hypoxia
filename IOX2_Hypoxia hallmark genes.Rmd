@@ -1,0 +1,36 @@
+```{r}
+## Load files
+# Change directory where files are stored from Deseq2 analysis
+setwd(file.path("Data"))
+
+hallmark <- read.csv("Hallmark hypoxia GSEA.csv", sep = ";", header = FALSE)
+hallmark
+```
+
+```{r}
+## Load files
+# Change directory where files are stored from Deseq2 analysis
+setwd(file.path("Output", "Deseq2", "in_vitro"))
+list.files()
+
+#IOX2 alone
+iox_0_3_vs_C <- read.csv("df1_group_IOX_0_3_vs_C.csv", row.names = 1, header = TRUE, sep = ";")
+iox_1_vs_C <- read.csv("df2_group_IOX_1_vs_C.csv", row.names = 1, header = TRUE, sep = ";")
+
+# IOX2 + TGFB
+t_iox_0_3_vs_t <- read.csv("df5_group_T_IOX0.3_vs_T.csv", row.names = 1, header = TRUE, sep = ";")
+t_iox_1_vs_t <- read.csv("df7_group_T_IOX1_vs_T.csv", row.names = 1, header = TRUE, sep = ";")
+
+
+
+```
+
+```{r}
+# Find all genes that remain significant in all 4 timepoints
+list_DEGs <- list(iox_1_vs_C$Symbol, t_iox_0_3_vs_t$Symbol, t_iox_1_vs_t$Symbol)
+# List of DEGs present in all 4 times
+intersection_all <- Reduce(intersect, list_DEGs)
+length(intersection_all)
+
+```
+

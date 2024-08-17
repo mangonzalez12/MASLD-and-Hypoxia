@@ -1,0 +1,209 @@
+
+
+```{r}
+#VOLCANO PLOTS
+# Assuming list_df is a list of data frames
+# Load necessary libraries
+library(ggplot2)
+library(scales)
+library(gridExtra)
+### Gene Set Enrichment analysis using cluster profiler
+library(clusterProfiler)
+library(fgsea)
+library(org.Hs.eg.db)
+#library(ComplexUpset)
+library(readxl)
+library(fgsea)
+#library(tidyverse)
+library(patchwork)
+library(ggplotify)
+library(grid)
+#library(plotly)
+library(colorspace)
+#library(VennDiagram)
+library(RColorBrewer)
+library(ggrepel)
+library(pheatmap)
+library(DESeq2)
+#library(cowplot)
+```
+
+```{r}
+
+# Volcano plot
+create_volcano_plot <- function(df, plot_title) {
+  library(ggplot2)
+  library(ggrepel)
+  
+  # Assuming your data frame has columns named "log2FoldChange," "pvalue," "padj," and "Symbol"
+  
+  # Your volcano plot code here
+  p <- ggplot(df, aes(x = log2FoldChange, y = -log10(pvalue))) +
+    geom_point(aes(color = case_when(
+      padj < 0.01 & log2FoldChange < 0 ~ "#273871",
+      padj < 0.01 & log2FoldChange > 0 ~ "#ea4c3b",
+      TRUE ~ "grey"
+    )), alpha = 0.7) +
+    geom_text_repel(
+      aes(label = Symbol),
+    ) +  # Add gene names using geom_text_repel for better label placement
+    scale_color_identity() +
+    labs(
+      title = plot_title,
+      x = "Log2 Fold Change",
+      y = "-log10(p-value)"
+    ) +
+    geom_hline(yintercept = -log10(0.01), linetype = "dashed", color = "blue") +
+    annotate("text", x = max(df$log2FoldChange), y = -log10(0.01),
+             label = "P-value = 0.01", vjust = -0.5, hjust = 1, color = "blue") +
+    theme_bw() +
+    theme(
+      axis.text = element_text(size = 10),
+      axis.title = element_text(size = 12)
+    ) +
+    # Format y-axis labels without decimals
+    scale_y_continuous(labels = scales::number_format(accuracy = 1))
+  
+  # Return the plot
+  return(p)
+}
+
+#Convert and replace a list of dataframes
+convertAndReplace <- function(list_df) {
+  for (i in seq_along(list_df)) {
+    char_cols <- sapply(list_df[[i]], is.character)
+    char_cols[length(char_cols)] <- FALSE
+    
+    list_df[[i]][, char_cols] <- lapply(list_df[[i]][, char_cols, drop = FALSE], function(x) as.numeric(gsub(",", ".", x)))
+  }
+  return(list_df)
+}
+
+```
+
+
+
+```{r}
+#Change directory where files are stored from Deseq2 analysis
+setwd(file.path("Output", "Deseq2", "in_vitro"))
+# Read each file and cooncatenate in a list to make volcano plots from all comparisons relateive to Control
+comparison1 <- read.csv("df1_group_IOX_0_3_vs_C.csv", row.names = 1, header = TRUE, ";")
+comparison2 <- read.csv("df2_group_IOX_1_vs_C.csv", row.names = 1, header = TRUE, ";")
+comparison3 <- read.csv("df3_group_T_vs_C.csv", row.names = 1, header = TRUE, ";")
+comparison4 <- read.csv("df4_group_T_A_vs_C.csv", row.names = 1, header = TRUE, ";")
+comparison5 <- read.csv("df5_group_T_IOX0.3_vs_C.csv", row.names = 1, header = TRUE, ";")
+comparison6 <- read.csv("df6_group_T_IOX0.3_A_vs_C.csv", row.names = 1, header = TRUE, ";")
+comparison7 <- read.csv("df7_group_T_IOX1_vs_C.csv", row.names = 1, header = TRUE, ";")
+
+
+```
+```{r}
+# Concat
+list_df <- list(comparison1, comparison2, comparison3, comparison4, comparison5, comparison6, comparison7)
+```
+
+
+```{r}
+list_df <- convertAndReplace(list_df = list_df)
+```
+
+```{r}
+## Plot Volcano for each file relative to control
+p1 <- create_volcano_plot(as.data.frame(list_df[1]), "IOX_0_3_vs_C")
+p2 <- create_volcano_plot(as.data.frame(list_df[2]), "IOX_1_vs_C")
+p3 <- create_volcano_plot(as.data.frame(list_df[3]), "T_vs_C")
+p4 <- create_volcano_plot(as.data.frame(list_df[4]), "T_A_vs_C")
+p5 <- create_volcano_plot(as.data.frame(list_df[5]), "T_IOX0.3_vs_C")
+p6 <- create_volcano_plot(as.data.frame(list_df[6]), "T_IOX0.3_A_vs_C")
+p7 <- create_volcano_plot(as.data.frame(list_df[7]), "T_IOX1_vs_C")
+```
+
+```{r}
+#Change directory where files are stored from Deseq2 analysis
+setwd(file.path("Output", "Volcano_plots"))
+## Save each file
+ggsave("IOX_0_3_vs_C.png", p1, width = 12, height = 8, dpi = 400)
+ggsave("IOX_1_vs_C.png", p2, width = 12, height = 8, dpi = 400)
+ggsave("T_vs_C.png", p3, width = 12, height = 8, dpi = 400)
+ggsave("T_A_vs_C.png", p4, width = 12, height = 8, dpi = 400)
+ggsave("T_IOX0.3_vs_C.png", p5, width = 12, height = 8, dpi = 400)
+ggsave("T_IOX0.3_A_vs_C.png", p6, width = 12, height = 8, dpi = 400)
+ggsave("T_IOX1_vs_C.png", p7, width = 12, height = 8, dpi = 400)
+```
+
+```{r}
+#Change directory where files are stored from Deseq2 analysis
+setwd(file.path("Output", "Deseq2", "in_vitro"))
+# Read each file and cooncatenate in a list to make volcano plots from all comparisons relative to TGFB
+comparison8 <- read.csv("df1_group_C_vs_T.csv", row.names = 1, header = TRUE, ";")
+comparison9 <- read.csv("df2_group_IOX_0_3_vs_T.csv", row.names = 1, header = TRUE, ";")
+comparison10 <- read.csv("df3_group_IOX_1_vs_T.csv", row.names = 1, header = TRUE, ";")
+comparison11 <- read.csv("df4_group_T_A_vs_T.csv", row.names = 1, header = TRUE, ";")
+comparison12 <- read.csv("df5_group_T_IOX0.3_vs_T.csv", row.names = 1, header = TRUE, ";")
+comparison13 <- read.csv("df6_group_T_IOX0.3_A_vs_T.csv", row.names = 1, header = TRUE, ";")
+comparison14 <- read.csv("df7_group_T_IOX1_vs_T.csv", row.names = 1, header = TRUE, ";")
+`````
+```{r}
+# Concat
+list_df_t <- list(comparison8, comparison9, comparison10, comparison11, comparison12, comparison13, comparison14)
+list_df_t <- convertAndReplace(list_df = list_df_t)
+```
+
+```{r}
+## Plot Volcano for each file relative to control
+p8 <- create_volcano_plot(as.data.frame(list_df_t[1]), "C_vs_T")
+p9 <- create_volcano_plot(as.data.frame(list_df_t[2]), "IOX_0_3_vs_T")
+p10 <- create_volcano_plot(as.data.frame(list_df_t[3]), "IOX_1_vs_T")
+p11 <- create_volcano_plot(as.data.frame(list_df_t[4]), "T_A_vs_T")
+p12 <- create_volcano_plot(as.data.frame(list_df_t[5]), "T_IOX0.3_vs_T")
+p13 <- create_volcano_plot(as.data.frame(list_df_t[6]), "T_IOX0.3_A_vs_T")
+p14 <- create_volcano_plot(as.data.frame(list_df_t[7]), "T_IOX1_vs_T")
+```
+
+
+```{r}
+#Change directory where files are stored from Deseq2 analysis
+setwd(file.path("Output", "Volcano_plots"))
+## Save each file
+ggsave("C_vs_T.png", p8, width = 12, height = 8, dpi = 400)
+ggsave("IOX_0_3_vs_T.png", p9, width = 12, height = 8, dpi = 400)
+ggsave("IOX_1_vs_T.png", p10, width = 12, height = 8, dpi = 400)
+ggsave("T_A_vs_T.png", p11, width = 12, height = 8, dpi = 400)
+ggsave("T_IOX0.3_vs_T.png", p12, width = 12, height = 8, dpi = 400)
+ggsave("T_IOX0.3_A_vs_T.png", p13, width = 12, height = 8, dpi = 400)
+ggsave("T_IOX1_vs_T.png", p14, width = 12, height = 8, dpi = 400)
+```
+
+```{r}
+#Make figure 5 with IOX SINGLE doses relative to control as well as combined with TGFB relative to TGFB 
+## Plot Volcano for each file relative to control
+p1 <- create_volcano_plot(as.data.frame(list_df[1]), "a)  IOX0.3 vs Control")
+p2 <- create_volcano_plot(as.data.frame(list_df[2]), "b)  IOX1 vs Control")
+p12 <- create_volcano_plot(as.data.frame(list_df_t[5]), "c)  TGFB + IOX0.3 vs TGFB")
+p14 <- create_volcano_plot(as.data.frame(list_df_t[7]), "d)  TGFB + IOX1 vs TGFB")
+
+#Concatenate plots for the combined plot
+plot_list <- list(p1, p2, p12, p14)
+
+```
+
+```{r}
+#Change directory where files are stored from Deseq2 analysis
+setwd(file.path("Output", "Volcano_plots"))
+# Arrange and combine the plots using gridExtra
+combined_plots <- grid.arrange(grobs = plot_list, nrow = 2, ncol = 2)
+print(combined_plots)
+ggsave("Combined_plots_only4 conditions_nice_resolution.tiff", combined_plots,  width = 14, height = 10, dpi = 1000)
+ggsave("Combined_plots_only4 conditions_nice_resolution.png", combined_plots,  width = 14, height = 10, dpi = 1000)
+```
+
+
+
+
+
+
+
+
+
+
+

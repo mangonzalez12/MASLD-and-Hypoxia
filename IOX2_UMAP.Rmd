@@ -1,0 +1,266 @@
+
+
+```{r}
+## Script to make a UMAP plot
+library(DESeq2)
+library(ggplot2)
+library(utils)
+library(readr)
+library(dplyr)
+library(pheatmap)
+library(biomaRt)
+library(openxlsx)
+library(umap)
+library(colorspace)
+```
+
+
+```{r}
+## A function to remove decimals
+remove_decimals <- function(cts){
+  genes_with_decimals <-rownames(cts)
+  genes_without_decimals<-gsub("\\..*", "", genes_with_decimals)
+  rownames(cts) <- genes_without_decimals
+  return(cts)
+}
+# Plot UMAP 2D function
+create_umap_plot <- function(umap_data, Colors, plot_title, group, filename) {
+  # Create a scatter plot of the UMAP results
+  umap_plot <- ggplot(umap_data, aes(x = V1, y = V2, color = .data[[group]])) +
+    geom_point(size = 10) +
+    scale_color_manual(values = Colors, name = group) +
+    labs(color = group) +
+    xlab("UMAP 1") +
+    ylab("UMAP 2") +
+    theme_minimal() +
+    theme(plot.title = element_text(size = 18), 
+          axis.text = element_text(size = 18), 
+          legend.text = element_text(size = 18))
+  
+  # Set the title
+  umap_plot <- umap_plot + ggtitle(plot_title)
+  
+  print(umap_plot)
+  
+  ggsave(filename, umap_plot, width = 12, height = 8, dpi = 400)
+}
+
+
+
+# Create a UMAP 3D function
+create_UMAP3D <- function(umap_data_3D, Patient_Colors, group) {
+    fig <- plot_ly(umap_data_3D, x = ~V1, y = ~V2, z = ~V3, color = umap_data_3D[[group]], colors = Patient_Colors, type = "scatter3d") %>%
+        add_markers() %>%
+        layout(scene = list(xaxis = list(title = '0'), 
+                            yaxis = list(title = '1'), 
+                            zaxis = list(title = '2')))
+    
+    print(fig)
+}
+
+```
+
+
+```{r}
+# Define path of files
+cts_path <- "Data/raw_cts_DESEQ2_prep.csv"
+meta_path <- "Data/meta_iox2.csv"
+
+# Read csv files
+cts <- read.csv(cts_path, header = TRUE, row.names = 1, sep = ";")
+cts <- remove_decimals(cts = cts)
+meta <- read.csv(meta_path, header = TRUE, ";", row.names = 1)
+```
+
+
+```{r}
+# DESEQ2 prep
+## Factor the treatment variable in metadata
+meta$group <- factor(meta$group)
+meta$group
+```
+```{r}
+## Create a DESeqDataSet object
+dds <- DESeqDataSetFromMatrix(countData = cts, colData = meta, design = ~group)
+```
+
+
+```{r}
+## Add vst normalization of the data
+vst <- varianceStabilizingTransformation(dds, blind = FALSE)
+
+cts_vst <- assay(vst)
+#cts_vst
+
+```
+
+
+```{r}
+plotPCA(vst, intgroup="group", ntop=17336)
+```
+
+```{r}
+#Use vst transformed data to plot a UMAP plot
+#rownames(meta)==colnames(cts_vst)
+cts_vst <- t(cts_vst)
+```
+
+
+```{r}
+##############################################################
+######                    UMAP
+# Transpose the matrix
+df <- cts_vst
+df <- as.matrix(df)
+dim(df)
+#df
+```
+```{r}
+# Perform UMAP on df
+set.seed(1234)
+umap_result <- umap(df)#, n_components=3)
+umap_data <- as.data.frame(umap_result$layout)
+umap_data
+```
+
+
+```{r}
+# See simple plot
+plot(umap_data[,1], umap_data[,2])
+```
+```{r}
+# Add grouping variable as a factor
+rownames(umap_data)==rownames(meta)
+meta$group
+umap_data$group <- factor(meta$group)
+umap_data
+```
+
+
+```{r}
+
+# Choose color for 8 groups
+#pal<-choose_palette()
+Patient_Colors <- c(C="#023FA5", IOX_0_3="#727EB5", IOX_1="#AEB2CD", T="#D8D9DE", T_A="#DFD7D9", T_IOX0.3="#D0AAB1", T_IOX0.3_A="#B56B7A", T_IOX1="#8E063B")
+```
+
+
+
+```{r}
+# Plot 2D UMAP, prints plot and saves with filename
+create_umap_plot(umap_data, Patient_Colors, plot_title="Hepatic stellate cell activation by TGFB and Hypoxia compound", group= "group", filename = "Output/UMAP/UMAP_plot_normalized_Article_Figure3.png")
+
+```
+
+
+
+```{r}
+# Perform UMAP on df
+set.seed(1234)
+umap_result_3D <- umap(df, n_components=3)
+umap_data_3D <- as.data.frame(umap_result_3D$layout)
+
+# Add grouping variable as a factor
+rownames(umap_data_3D)==meta$Sample
+meta$group
+umap_data_3D$group <- factor(meta$group)
+umap_data_3D
+```
+
+
+
+```{r}
+# Plotly 3D plot
+plot_3d <- create_UMAP3D(umap_data_3D, Patient_Colors, group = "group")
+plot_3d
+# Create a 3D plotly plot (replace with your actual plot)
+plot_ly(z = ~plot_3d, type = "surface")
+```
+
+
+
+
+
+umap_data_3D
+
+
+
+
+
+
+
+
+# Check order of samples
+colnames(cts)==meta$Sample
+# Remove decimals from ENS ids
+cts <- remove_decimals(cts = cts)
+# Retrieve gene symbols based on Ensembl IDs from your data frame to map DEGs
+db <-makeGeneSymbols_db(cts)
+#write.csv(db1, "gene_info.csv")
+dim(db)
+
+
+
+
+
+
+
+###########################################################
+# Data normalization for visualization with 2LOGRtransformation
+
+##Order metadata by group
+meta$group
+meta_ordered<-order_rows(meta = meta, order_vector = meta$group)
+head(meta_ordered)
+#### Check order between meta ordered and cts ordered
+meta$Sample==colnames(cts)
+###Use function to normalize
+normalized_cts<-normalize(cts = cts)#Normalized to control samples
+dim(normalized_cts)## see dimensions
+head(normalized_cts)## see values
+###Use function to transform normalized cts to 2logR values
+cts.2logr<-transformation_Rlog_(normalized_cts)
+cts.2logr
+dim(cts.2logr)
+
+
+
+
+
+
+
+##############################################################
+######                    UMAP
+# Transpose the matrix
+df <- t(cts.2logr)
+df <- as.matrix(df)
+dim(df)
+df
+# Perform UMAP on df
+set.seed(1234)
+umap_result <- umap(df)#, n_components=3)
+umap_data <- as.data.frame(umap_result$layout)
+umap_data
+# See simple plot
+plot(umap_data[,1], umap_data[,2])
+# Add grouping variable as a factor
+rownames(umap_data)==meta$Sample
+meta$group
+umap_data$group <- factor(meta$group)
+umap_data
+# Choose color for 8 groups
+pal<-choose_palette()
+Patient_Colors <- c(C="#023FA5", IOX_0_3="#727EB5", IOX_1="#AEB2CD", T="#D8D9DE", T_A="#DFD7D9", T_IOX0.3="#D0AAB1", T_IOX0.3_A="#B56B7A", T_IOX1="#8E063B")
+
+# Plot 2D UMAP, prints plot and saves with filename
+create_umap_plot(umap_data, Patient_Colors, plot_title="Hepatic stellate cell activation by TGFB and Hypoxia compound", group= "group", filename = "UMAP_plot_normalized_Article_Figure3.png")
+
+#Plotly 3D plot
+plot_3d <- create_UMAP3D(umap_data, Patient_Colors, group = "group")
+plot_3d
+# Create a 3D plotly plot (replace with your actual plot)
+plot_ly(z = ~plot_3d, type = "surface")
+
+# Save the plot using orca
+orca("/plot_umap3d.png", width = 800, height = 600)
+
