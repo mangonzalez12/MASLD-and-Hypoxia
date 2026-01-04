@@ -9,4 +9,12 @@ Here, we screened two hypoxia-mimicking compounds in different doses of non-toxi
 
 In summary, Hypoxia-mimicking compounds like IOX2 hold promise for enhancing fibrosis in in vitro models, providing valuable insights into fibrosis pathogenesis, hypoxia-related genes and potential therapeutic strategies. 
 
+Published: https://www.mdpi.com/2227-9059/13/6/1448
+
+![biomedicines-13-01448-g001-550](https://github.com/user-attachments/assets/df8579a2-63e4-4a03-b736-6f33a414b5cb)
+
+
+
+
+
 
