@@ -13,6 +13,8 @@ Published: https://www.mdpi.com/2227-9059/13/6/1448
 
 ![biomedicines-13-01448-g001-550](https://github.com/user-attachments/assets/df8579a2-63e4-4a03-b736-6f33a414b5cb)
 
+![pic](https://github.com/user-attachments/assets/6ccc92fe-4866-4157-8554-46b41ded2337)
+
 
 
 
